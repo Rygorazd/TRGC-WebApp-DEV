@@ -151,12 +151,11 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 		}
 		?>   
 			<h2>Login</h2>
-			<p></p>
-			<form method="post" class="form-horizontal">
-				
+			<p>Please enter your credentials to login.</p>
+			<form method="post" class="form-horizontal">	
 				<div class="form-group">
-				<label>Username or Email</label>
-				<input type="text" name="txt_username_email" class="form-control" placeholder="enter username or email" />
+				<label>Username</label>
+				<input type="text" name="txt_username_email" class="form-control" placeholder="enter username" />
 				</div>			
 				<div class="form-group">
 				<label>Password</label>

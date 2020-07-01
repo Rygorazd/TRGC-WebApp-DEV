@@ -87,7 +87,6 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 
 <!-- Custom styles for this template -->
 <link href="../CSS/style.css" rel="stylesheet">
-<link href="../CSS/bootstrap.min.css" rel="stylesheet">
 
 <script src="../JavaScript/script.js"></script>
 
@@ -136,7 +135,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 			{
 			?>
 				<div class="alert alert-danger">
-					<strong>WRONG ! <?php echo $error; ?></strong>
+					<strong>Error ! <?php echo $error; ?></strong>
 				</div>
             <?php
 			}
@@ -150,9 +149,8 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
         <?php
 		}
 		?>   
-			<center><h2>Register Page</h2></center>
+			<h2>Register Page</h2>
 			<form method="post" class="form-horizontal">
-					
 				
 				<div class="form-group">
 				<label class="col-sm-3 control-label">Username</label>
@@ -177,13 +175,13 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 					
 				<div class="form-group">
 				<div class="col-sm-offset-3 col-sm-9 m-t-15">
-				<input type="submit"  name="btn_register" class="btn btn-primary " value="Register">
+				<input type="submit"  name="btn_register" class="btn btn-primary" value="Register">
 				</div>
 				</div>
 				
 				<div class="form-group">
 				<div class="col-sm-offset-3 col-sm-9 m-t-15">
-				Already have an account registered here?<a href="index.php"><p class="text-info">Login to your account</p></a>		
+				Already have an account registered?<a href="index.php"><p class="text-info">Login here</p></a>		
 				</div>
 				</div>
 					
