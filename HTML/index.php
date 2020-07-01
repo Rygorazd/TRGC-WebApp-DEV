@@ -39,13 +39,13 @@
 <!-- navbar-->
 <div class="container">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a href="index.html" class="navbar-brand">TRGC</a>
+        <a href="index.php" class="navbar-brand">TRGC</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>    
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="index.html">Home </a>
+            <a class="nav-item nav-link active" href="index.php">Home </a>
             <a class="nav-item nav-link" href="booking.php">Book </a>
             <a class="nav-item nav-link" href="login.php">Login</a>
             <a class="nav-item nav-link" href="register.php">Register</a>

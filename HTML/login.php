@@ -113,7 +113,7 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
         </button>    
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="index.html">Home </a>
+            <a class="nav-item nav-link" href="index.php">Home </a>
             <a class="nav-item nav-link" href="booking.php">Book </a>
             <a class="nav-item nav-link active" href="login.php">Login <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="register.php">Register</a>

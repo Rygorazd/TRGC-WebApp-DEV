@@ -109,7 +109,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
     </button>    
     <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav">
-        <a class="nav-item nav-link" href="index.html">Home </a>
+        <a class="nav-item nav-link" href="index.php">Home </a>
         <a class="nav-item nav-link" href="booking.php">Book </a>
         <a class="nav-item nav-link" href="login.php">Login</a>
         <a class="nav-item nav-link active" href="register.php">Register<span class="sr-only">(current)</span></a>
@@ -124,11 +124,10 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 </div>
     
       <!-- main content-->
-      <div class="wrapper">
-	
-	<div class="container">
-			
-		<div class="col-lg-12">
+      <div class="container">
+        <div class="wrapper">
+	  	    <div class="container">
+			  		<div class="col-lg-12">
 		
 		<?php
 		if(isset($errorMsg))
@@ -184,7 +183,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 				
 				<div class="form-group">
 				<div class="col-sm-offset-3 col-sm-9 m-t-15">
-				You have a account register here? <a href="index.php"><p class="text-info">Login Account</p></a>		
+				Already have an account registered here?<a href="index.php"><p class="text-info">Login to your account</p></a>		
 				</div>
 				</div>
 					
@@ -194,7 +193,8 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 		
 	</div>
 			
-	</div>
+  </div>
+      </div>
 
 
     <!-- footer -->
