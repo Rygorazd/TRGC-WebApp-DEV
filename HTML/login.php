@@ -154,7 +154,7 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 		?>   
 			<center><h2>Login Page</h2></center>
 			<form method="post" class="form-horizontal">
-					
+				<div class="container">
 				<div class="form-group">
 				<label>Username or Email</label>
 				<!--<label class="col-sm-3 control-label">Username or Email</label>-->
@@ -180,7 +180,7 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 				You don't have a account register here? <a href="register.php"><p class="text-info">Register Account</p></a>		
 				</div>
 				</div>
-					
+	</div>	
 			</form>
 			
 		</div>
