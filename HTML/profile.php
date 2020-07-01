@@ -1,14 +1,3 @@
-<?php
-// Initialize the session
-session_start();
- 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
-}
-?>
- 
 <!DOCTYPE html>
 
 <html lang="en">
@@ -68,18 +57,46 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
   </nav>
 </div>
-<body>
-    <div class="container">
-    <div class="container body-content" style="padding-top:35px";>
-    <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
-    </div>
-    <p>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-    </p>
-</div>
-</div>
+<div class="wrapper">
+	<div class="container">
+			
+		<div class="col-lg-12">
+			<center>
+				<h2>
+				<?php
+				
+				require_once 'config.php';
+				
+				session_start();
+
+				if(!isset($_SESSION['user_login']))	//check unauthorize user not access in "profile.php" page
+				{
+					header("location: index.php");
+				}
+				
+				$id = $_SESSION['user_login'];
+				
+				$select_stmt = $db->prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
+				$select_stmt->execute(array(":uid"=>$id));
+	
+				$row=$select_stmt->fetch(PDO::FETCH_ASSOC);
+				
+				if(isset($_SESSION['user_login']))
+				{
+				?>
+					Welcome,
+				<?php
+						echo $row['username'];
+				}
+				?>
+				</h2>
+					<a href="logout.php">Logout</a>
+			</center>
+			
+		</div>
+		
+	</div>	
+	</div>
 
     <!-- footer -->
     <div class="container">

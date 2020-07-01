@@ -1,88 +1,67 @@
 <?php
-// Initialize the session
-session_start();
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: profile.php");
-    exit;
-}
- 
-// Include config file
-require_once "config.php";
- 
-// Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = "";
- 
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Check if username is empty
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
-    } else{
-        $username = trim($_POST["username"]);
-    }
-    
-    // Check if password is empty
-    if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
-    } else{
-        $password = trim($_POST["password"]);
-    }
-    
-    // Validate credentials
-    if(empty($username_err) && empty($password_err)){
-        // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = :username";
-        
-        if($stmt = $pdo->prepare($sql)){
-            // Bind variables to the prepared statement as parameters
-            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-            
-            // Set parameters
-            $param_username = trim($_POST["username"]);
-            
-            // Attempt to execute the prepared statement
-            if($stmt->execute()){
-                // Check if username exists, if yes then verify password
-                if($stmt->rowCount() == 1){
-                    if($row = $stmt->fetch()){
-                        $id = $row["id"];
-                        $username = $row["username"];
-                        $hashed_password = $row["password"];
-                        if(password_verify($password, $hashed_password)){
-                            // Password is correct, so start a new session
-                            session_start();
-                            
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                            
-                            // Redirect user to welcome page
-                            header("location: booking.php");
-                        } else{
-                            // Display an error message if password is not valid
-                            $password_err = "The password you entered was not valid.";
-                        }
-                    }
-                } else{
-                    // Display an error message if username doesn't exist
-                    $username_err = "No account found with that username.";
-                }
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
 
-            // Close statement
-            unset($stmt);
-        }
-    }
-    
-    // Close connection
-    unset($pdo);
+require_once 'config.php';
+
+session_start();
+
+if(isset($_SESSION["user_login"]))	//check condition user login not direct back to index.php page
+{
+	header("location: profile.php");
+}
+
+if(isset($_REQUEST['btn_login']))	//button name is "btn_login" 
+{
+	$username	=strip_tags($_REQUEST["txt_username_email"]);	//textbox name "txt_username_email"
+	$email		=strip_tags($_REQUEST["txt_username_email"]);	//textbox name "txt_username_email"
+	$password	=strip_tags($_REQUEST["txt_password"]);			//textbox name "txt_password"
+		
+	if(empty($username)){						
+		$errorMsg[]="please enter username or email";	//check "username/email" textbox not empty 
+	}
+	else if(empty($email)){
+		$errorMsg[]="please enter username or email";	//check "username/email" textbox not empty 
+	}
+	else if(empty($password)){
+		$errorMsg[]="please enter password";	//check "passowrd" textbox not empty 
+	}
+	else
+	{
+		try
+		{
+			$select_stmt=$db->prepare("SELECT * FROM tbl_user WHERE username=:uname OR email=:uemail"); //sql select query
+			$select_stmt->execute(array(':uname'=>$username, ':uemail'=>$email));	//execute query with bind parameter
+			$row=$select_stmt->fetch(PDO::FETCH_ASSOC);
+			
+			if($select_stmt->rowCount() > 0)	//check condition database record greater zero after continue
+			{
+				if($username==$row["username"] OR $email==$row["email"]) //check condition user taypable "username or email" are both match from database "username or email" after continue
+				{
+					if(password_verify($password, $row["password"])) //check condition user taypable "password" are match from database "password" using password_verify() after continue
+					{
+						$_SESSION["user_login"] = $row["user_id"];	//session name is "user_login"
+						$loginMsg = "Successfully Login...";		//user login success message
+						header("refresh:2; profile.php");			//refresh 2 second after redirect to "profile.php" page
+					}
+					else
+					{
+						$errorMsg[]="wrong password";
+					}
+				}
+				else
+				{
+					$errorMsg[]="wrong username or email";
+				}
+			}
+			else
+			{
+				$errorMsg[]="wrong username or email";
+			}
+		}
+		catch(PDOException $e)
+		{
+			$e->getMessage();
+		}		
+	}
 }
 ?>
 
@@ -148,28 +127,69 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
     
       <!-- main content-->
-      <div class="container">
-          <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please enter your credentials to login.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
-                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
-            </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
-        </form>
-    </div>
-</div>
+      <div class="wrapper">
+	
+	<div class="container">
+			
+		<div class="col-lg-12">
+		
+		<?php
+		if(isset($errorMsg))
+		{
+			foreach($errorMsg as $error)
+			{
+			?>
+				<div class="alert alert-danger">
+					<strong><?php echo $error; ?></strong>
+				</div>
+            <?php
+			}
+		}
+		if(isset($loginMsg))
+		{
+		?>
+			<div class="alert alert-success">
+				<strong><?php echo $loginMsg; ?></strong>
+			</div>
+        <?php
+		}
+		?>   
+			<center><h2>Login Page</h2></center>
+			<form method="post" class="form-horizontal">
+					
+				<div class="form-group">
+				<label class="col-sm-3 control-label">Username or Email</label>
+				<div class="col-sm-6">
+				<input type="text" name="txt_username_email" class="form-control" placeholder="enter username or email" />
+				</div>
+				</div>
+					
+				<div class="form-group">
+				<label class="col-sm-3 control-label">Password</label>
+				<div class="col-sm-6">
+				<input type="password" name="txt_password" class="form-control" placeholder="enter passowrd" />
+				</div>
+				</div>
+				
+				<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9 m-t-15">
+				<input type="submit" name="btn_login" class="btn btn-success" value="Login">
+				</div>
+				</div>
+				
+				<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-9 m-t-15">
+				You don't have a account register here? <a href="register.php"><p class="text-info">Register Account</p></a>		
+				</div>
+				</div>
+					
+			</form>
+			
+		</div>
+		
+	</div>
+			
+	</div>
 
 
     <!-- footer -->

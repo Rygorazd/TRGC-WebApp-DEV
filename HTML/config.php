@@ -1,17 +1,17 @@
 <?php
-/* Database credentials. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
-define('DB_SERVER', 'trgc-mysql.mysql.database.azure.com');
-define('DB_USERNAME', 'student');
-define('DB_PASSWORD', 'T0r0nt057');
-define('DB_NAME', 'trgc_dev');
- 
-/* Attempt to connect to MySQL database */
-try{
-    $pdo = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
-    // Set the PDO error mode to exception
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e){
-    die("ERROR: Could not connect. " . $e->getMessage());
+$db_host="trgc-mysql.mysql.database.azure.com"; //host server 
+$db_user="student";	//database username
+$db_password="T0r0nt057";	//database password   
+$db_name="trgcdev";	//database name
+
+try
+{
+	$db=new PDO("mysql:host={$db_host};dbname={$db_name}",$db_user,$db_password);
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
+catch(PDOEXCEPTION $e)
+{
+	$e->getMessage();
+}
+
 ?>
