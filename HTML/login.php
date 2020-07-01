@@ -127,13 +127,10 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
       </nav>
     </div>
     
-      <!-- main content-->
+	  <!-- main content-->
+	  <div class="container">
       <div class="wrapper">
-	
-	<div class="container">
-			
-		<div class="col-lg-12">
-		
+		<!--<div class="col-lg-12">-->
 		<?php
 		if(isset($errorMsg))
 		{
