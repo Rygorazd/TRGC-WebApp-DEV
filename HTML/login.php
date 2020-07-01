@@ -154,40 +154,39 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 		?>   
 			<center><h2>Login Page</h2></center>
 			<form method="post" class="form-horizontal">
-				<div class="container">
+				
 				<div class="form-group">
 				<label>Username or Email</label>
 				<!--<label class="col-sm-3 control-label">Username or Email</label>-->
 				<input type="text" name="txt_username_email" class="form-control" placeholder="enter username or email" />
 				</div>
-				</div>
+				
 					
 				<div class="form-group">
 				<label>Password</label>
 				<!--<label class="col-sm-3 control-label">Password</label>-->
-				<input type="password" name="txt_password" class="form-control" placeholder="enter passowrd" />
+				<input type="password" name="txt_password" class="form-control" placeholder="enter password" />
 				</div>
-				</div>
+				
 				
 				<div class="form-group">
 				<!--<div class="col-sm-offset-3 col-sm-9 m-t-15">-->
 				<input type="submit" name="btn_login" class="btn btn-success" value="Login">
 				</div>
-				</div>
+				
 				
 				<div class="form-group">
 				<!--<div class="col-sm-offset-3 col-sm-9 m-t-15">-->
-				Don't have an account? <a href="register.php"><p class="text-info">Sign uo here</p></a>		
+				Don't have an account? <a href="register.php"><p class="text-info">Sign up here</p></a>		
 				</div>
-				</div>
-	</div>	
+
 			</form>
 			
 		</div>
 		
 	</div>
 			
-	</div>
+
 
 
     <!-- footer -->
