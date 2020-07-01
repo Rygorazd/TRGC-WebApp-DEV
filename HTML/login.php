@@ -91,7 +91,6 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 
     <!-- Custom styles for this template -->
     <link href="../CSS/style.css" rel="stylesheet">
-    <!-- <link href="../CSS/bootstrap.min.css" rel="stylesheet"> -->
 
     <script src="../JavaScript/script.js"></script>
 
@@ -130,7 +129,6 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 	  <!-- main content-->
 	  <div class="container">
       <div class="wrapper">
-		<!--<div class="col-lg-12">-->
 		<?php
 		if(isset($errorMsg))
 		{
@@ -152,43 +150,28 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
         <?php
 		}
 		?>   
-			<center><h2>Login Page</h2></center>
+			<h2>Login</h2>
+			<p></p>
 			<form method="post" class="form-horizontal">
 				
 				<div class="form-group">
 				<label>Username or Email</label>
-				<!--<label class="col-sm-3 control-label">Username or Email</label>-->
 				<input type="text" name="txt_username_email" class="form-control" placeholder="enter username or email" />
-				</div>
-				
-					
+				</div>			
 				<div class="form-group">
 				<label>Password</label>
-				<!--<label class="col-sm-3 control-label">Password</label>-->
 				<input type="password" name="txt_password" class="form-control" placeholder="enter password" />
-				</div>
-				
-				
+				</div>			
 				<div class="form-group">
-				<!--<div class="col-sm-offset-3 col-sm-9 m-t-15">-->
-				<input type="submit" name="btn_login" class="btn btn-success" value="Login">
-				</div>
-				
-				
+				<input type="submit" name="btn_login" class="btn btn-primary" value="Login">
+				</div>				
 				<div class="form-group">
-				<!--<div class="col-sm-offset-3 col-sm-9 m-t-15">-->
-				Don't have an account? <a href="register.php"><p class="text-info">Sign up here</p></a>		
+				<p>Don't have an account? <a href="register.php">Sign up here</a></p>		
 				</div>
-
-			</form>
-			
+			</form>	
 		</div>
-		
 	</div>
-			
-
-
-
+		
     <!-- footer -->
     <div class="wrapper">
         <footer class="fixed-bottom py-3 bg-light">
