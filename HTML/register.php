@@ -151,36 +151,26 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 			<form method="post" class="form-horizontal">
 				
 				<div class="form-group">
-				<label class="col-sm-3 control-label">Username</label>
-				<div class="col-sm-6">
+				<label>Username</label>
 				<input type="text" name="txt_username" class="form-control" placeholder="enter username" />
 				</div>
-				</div>
 				
 				<div class="form-group">
-				<label class="col-sm-3 control-label">Email</label>
-				<div class="col-sm-6">
+				<label>Email</label>
 				<input type="text" name="txt_email" class="form-control" placeholder="enter email" />
 				</div>
-				</div>
 					
 				<div class="form-group">
-				<label class="col-sm-3 control-label">Password</label>
-				<div class="col-sm-6">
+				<label>Password</label>
 				<input type="password" name="txt_password" class="form-control" placeholder="enter passowrd" />
 				</div>
-				</div>
 					
-				<div class="form-group">
-				<div class="col-sm-offset-3 col-sm-9 m-t-15">
+				<div class="form-group">>
 				<input type="submit"  name="btn_register" class="btn btn-primary" value="Register">
-				</div>
 				</div>
 				
 				<div class="form-group">
-				<div class="col-sm-offset-3 col-sm-9 m-t-15">
 				Already have an account registered?<a href="index.php"><p class="text-info">Login here</p></a>		
-				</div>
 				</div>
 					
 			</form>
