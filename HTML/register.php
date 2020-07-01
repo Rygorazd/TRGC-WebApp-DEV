@@ -162,10 +162,10 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 					
 				<div class="form-group">
 				<label>Password</label>
-				<input type="password" name="txt_password" class="form-control" placeholder="enter passowrd" />
+				<input type="password" name="txt_password" class="form-control" placeholder="enter password" />
 				</div>
 					
-				<div class="form-group">>
+				<div class="form-group">
 				<input type="submit"  name="btn_register" class="btn btn-primary" value="Register">
 				</div>
 				
