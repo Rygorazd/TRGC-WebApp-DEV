@@ -91,7 +91,7 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 
     <!-- Custom styles for this template -->
     <link href="../CSS/style.css" rel="stylesheet">
-    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../CSS/bootstrap.min.css" rel="stylesheet"> -->
 
     <script src="../JavaScript/script.js"></script>
 
@@ -177,7 +177,7 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 				
 				<div class="form-group">
 				<!--<div class="col-sm-offset-3 col-sm-9 m-t-15">-->
-				You don't have a account register here? <a href="register.php"><p class="text-info">Register Account</p></a>		
+				Don't have an account? <a href="register.php"><p class="text-info">Sign uo here</p></a>		
 				</div>
 				</div>
 	</div>	
