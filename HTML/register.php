@@ -125,8 +125,6 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
       <!-- main content-->
       <div class="container">
         <div class="wrapper">
-	  	    <div class="container">
-			  		<div class="col-lg-12">
 		
 		<?php
 		if(isset($errorMsg))
@@ -189,9 +187,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 			
 		</div>
 		
-	</div>
-			
-  </div>
+
       </div>
 
 
