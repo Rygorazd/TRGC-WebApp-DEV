@@ -87,6 +87,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 
 <!-- Custom styles for this template -->
 <link href="../CSS/style.css" rel="stylesheet">
+<link href="../CSS/bootstrap.min.css" rel="stylesheet">
 
 <script src="../JavaScript/script.js"></script>
 
