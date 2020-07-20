@@ -23,7 +23,7 @@
 
 <!-- Custom styles for this template -->
 <link href="../CSS/style.css" rel="stylesheet">
-<link href="public/3-theme.css" rel="stylesheet">
+<link href="../public/3-theme.css" rel="stylesheet">
 
 <script src="../JavaScript/script.js"></script>
 <script src="../public/3b-reserve-slot.js"></script>
