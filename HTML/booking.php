@@ -25,6 +25,7 @@
 <link href="../CSS/style.css" rel="stylesheet">
 
 <script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/3b-reserve-slot.js"></script>
 
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"> -->
 <style type="text/css">
@@ -63,7 +64,23 @@
     <div class="container body-content" style="padding-top:35px";>
 <h1> Booking page</h1>
     Nothing yet!
-
+    <form id="res_form" onsubmit="return res.save()">
+      <label for="res_name">Name</label>
+      <input type="text" required id="res_name"/>
+      <label for="res_email">Email</label>
+      <input type="email" required id="res_email"/>
+      <label for="res_tel">Telephone Number</label>
+      <input type="text" required id="res_tel"/>
+      <label for="res_notes">Notes (if any)</label>
+      <input type="text" id="res_notes"/>
+      <label>Reservation Date</label>
+      <div id="res_date" class="calendar"></div>
+      <label>Reservation Slot</label>
+      <div id="res_slot"></div>
+      <button id="res_go" disabled>
+        Submit
+      </button>
+    </form>
     </div>
 </div>
 
