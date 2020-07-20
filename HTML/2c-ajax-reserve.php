@@ -1,6 +1,6 @@
 <?php
 // INIT
-require __DIR__ . DIRECTORY_SEPARATOR . "HTML" . DIRECTORY_SEPARATOR . "../config.php";
+require __DIR__ . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "2a-config.php";
 require PATH_LIB . "../lib/2b-lib-res.php";
 $reslib = new Res();
 
