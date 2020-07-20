@@ -62,7 +62,7 @@
     <div class="container">
     <div class="container body-content" style="padding-top:35px";>
 <h1> Booking page</h1>
-    <div include-php="3b-reserve-slot.php"></div>
+    <?php include '3b-reserve-slot.php';?>
 
     </div>
 </div>
