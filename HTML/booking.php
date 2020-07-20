@@ -64,7 +64,7 @@
     <div class="container">
     <div class="container body-content" style="padding-top:35px";>
 <h1> Booking page</h1>
-    Nothing yet!
+    
     <form id="res_form" onsubmit="return res.save()">
       <label for="res_name">Name</label>
       <input type="text" required id="res_name"/>

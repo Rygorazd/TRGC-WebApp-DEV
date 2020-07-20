@@ -89,25 +89,6 @@ class Res {
     return $result;
   }
 
-  /* [WHOLE DAY BOOKING] */
-  function bookDay ($name, $email, $tel, $date, $notes="") {
-  // bookDay() : reserve for the entire day
-
-    // Check if customer already booked on the day
-    $sql = "SELECT * FROM `reservations` WHERE `res_email`=? AND `res_date`=?";
-    $cond = [$email, $date];
-    $check = $this->fetch($sql, $cond);
-    if (count($check)>0) {
-      $this->error = $email . " has already reserved " . $date;
-      return false;
-    }
-
-    // Process reservation
-    $sql = "INSERT INTO `reservations` (`res_name`, `res_email`, `res_tel`, `res_notes`, `res_date`) VALUES (?,?,?,?,?)";
-    $cond = [$name, $email, $tel, $notes, $date];
-    return $this->exec($sql, $cond);
-  }
-
   /* [TIME SLOT BOOKING] */
   function bookSlot ($name, $email, $tel, $date, $slot, $notes="") {
   // bookSlot() : reserve for the time slot
@@ -126,26 +107,7 @@ class Res {
     $cond = [$name, $email, $tel, $notes, $date, $slot];
     return $this->exec($sql, $cond);
   }
-
-  /* [DATE RANGE BOOKING] */
-  function bookRange ($name, $email, $tel, $start, $end, $notes="") {
-  // bookRange() : reserve for the date range
-
-    // Check if customer already booked within the date range
-    $sql = "SELECT * FROM `reservations` WHERE (`res_start` BETWEEN ? AND ?) OR (`res_end` BETWEEN ? AND ?)";
-    $cond = [$start, $end, $start, $end];
-    $check = $this->fetch($sql, $cond);
-    if (count($check)>0) {
-      $this->error = $email . " has already reserved between " . $start . " and " . $end;
-      return false;
-    }
-
-    // Process reservation
-    $sql = "INSERT INTO `reservations` (`res_name`, `res_email`, `res_tel`, `res_notes`, `res_start`, `res_end`) VALUES (?,?,?,?,?,?)";
-    $cond = [$name, $email, $tel, $notes, $start, $end];
-    return $this->exec($sql, $cond);
-  }
-
+  
   /* [GET RESERVATION] */
   // @TODO - There are 101 ways to get/search for the reservations
   // This is a simple example that will get all reservations within a selected date range
