@@ -1,7 +1,7 @@
 <?php
 // INIT
-require "2a-config.php";
-require "2b-lib-res.php";
+require "lib/2a-config.php";
+require "lib/2b-lib-res.php";
 $reslib = new Res();
 
 /* ANTI-SPAM MEASURE YOU CAN CONSIDER
