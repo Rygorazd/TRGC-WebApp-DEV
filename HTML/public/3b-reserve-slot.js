@@ -19,7 +19,7 @@ var res = {
 
     // AJAX call
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', "2c-ajax-reserve.php", true);
+    xhr.open('POST', "../2c-ajax-reserve.php", true);
     xhr.onload = function(){
       // Set contents, click, change actions
       document.getElementById("res_date").innerHTML = this.response;
@@ -57,7 +57,7 @@ var res = {
 
     // AJAX call
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', "2c-ajax-reserve.php", true);
+    xhr.open('POST', "../2c-ajax-reserve.php", true);
     xhr.onload = function(){
       // Set contents
       document.getElementById("res_slot").innerHTML = this.response;
@@ -102,7 +102,7 @@ var res = {
 
     // AJAX call
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', "2c-ajax-reserve.php", true);
+    xhr.open('POST', "../2c-ajax-reserve.php", true);
     xhr.onload = function(){
       var res = JSON.parse(this.response);
       // OK - Redirect to thank you page
