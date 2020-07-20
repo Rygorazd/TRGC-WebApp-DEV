@@ -23,10 +23,10 @@
 
 <!-- Custom styles for this template -->
 <link href="../CSS/style.css" rel="stylesheet">
-<link href="../CSS/3-theme.css" rel="stylesheet">
+<link href="public/3-theme.css" rel="stylesheet">
 
 <script src="../JavaScript/script.js"></script>
-<script src="../JavaScript/3b-reserve-slot.js"></script>
+<script src="../public/3b-reserve-slot.js"></script>
 
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"> -->
 <style type="text/css">
