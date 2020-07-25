@@ -39,7 +39,7 @@ div.calendar td.blank {
 /* [DOES NOT MATTER]
 html, body {
   font-family: arial, sans-serif;
-}
+}*/
 #res_form {
   padding: 15px;
   max-width: 400px;
@@ -62,8 +62,8 @@ html, body {
 }
 #res_form button {
   margin-top: 10px;
-  background: #b53732;
+  background: dodgerblue;
   color: #fff;
   padding: 10px;
   border: 0;
-}*/
+}
