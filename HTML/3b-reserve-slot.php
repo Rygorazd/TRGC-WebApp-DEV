@@ -5,7 +5,8 @@
       PHP Reservation Demo - Single Time Slot Booking
     </title>
     <script src="/public/3b-reserve-slot.js"></script>
-    <link href="/public/3-theme.css" rel="stylesheet">
+    <link href="../CSS/style.css" rel="stylesheet">
+    <link href="../CSS/bootstrap.mini.css" rel="stylesheet">
   </head>
   <body>
     <h1>

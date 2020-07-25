@@ -155,7 +155,6 @@ if ($_POST['req']) { switch ($_POST['req']) {
       <option value="4PM">4PM</option>>
       <option value="5PM">5PM</option>>
       <option value="6PM">6PM</option>>
-
     </select>
     <?php break;
 
