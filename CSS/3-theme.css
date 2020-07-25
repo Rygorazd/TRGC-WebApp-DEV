@@ -23,7 +23,7 @@ div.calendar table tr.days td {
 }
 /* Currently chosen date */
 div.calendar table td.active {
-  background: #d64646;
+  background: dodgerblue;
   color: #fff;
 }
 /* Dates you can choose */
