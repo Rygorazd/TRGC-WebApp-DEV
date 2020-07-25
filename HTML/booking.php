@@ -59,7 +59,7 @@
 </div>
 
   <!-- main content-->
-    <div class="container-fluid">
+    <div class="container text-center">
     
     <!-- <div class="container body-content" style="padding-top:35px";> -->
 <h1> Booking page</h1>
