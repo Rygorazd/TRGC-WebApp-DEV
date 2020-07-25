@@ -1,8 +1,5 @@
 <?php
 // INIT
-require "lib/2a-config.php";
-require "lib/2b-lib-res.php";
-$reslib = new Res();
 $userID = $_SESSION["userID"];
 ?>
 
