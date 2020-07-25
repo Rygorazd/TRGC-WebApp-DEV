@@ -1,3 +1,12 @@
+<?php
+// INIT
+require "lib/2a-config.php";
+require "lib/2b-lib-res.php";
+$reslib = new Res();
+$userID = $_SESSION["userID"];
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -59,7 +68,7 @@
 </div>
 
   <!-- main content-->
-    <div class="container text-center">
+    <div class="container">
     
     <!-- <div class="container body-content" style="padding-top:35px";> -->
 <h1> Booking page</h1>
