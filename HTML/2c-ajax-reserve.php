@@ -145,8 +145,17 @@ if ($_POST['req']) { switch ($_POST['req']) {
     if ($weekend) { RESTRICT }
     else { AS USUAL } */ ?>
     <select>
-      <option value="AM">AM</option>>
-      <option value="PM">PM</option>>
+      <option value="9AM">9AM</option>>
+      <option value="10AM">10AM</option>>
+      <option value="11AM">11AM</option>>
+      <option value="12PM">12PM</option>>
+      <option value="1PM">1PM</option>>
+      <option value="2PM">2PM</option>>
+      <option value="3PM">3PM</option>>
+      <option value="4PM">4PM</option>>
+      <option value="5PM">5PM</option>>
+      <option value="6PM">6PM</option>>
+
     </select>
     <?php break;
 
