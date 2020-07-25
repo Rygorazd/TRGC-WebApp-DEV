@@ -102,12 +102,12 @@ class Res {
       return false;
     }
     // get userID
-    $userID = $_SESSION["userID"];
+    //$userID = $_SESSION["userID"];
 
     // get userID v2
     $sql = "SELECT * FROM `tbl_user` WHERE userID=$userID";
  
-    
+
     // Process reservation
     $sql = "INSERT INTO `reservations` (`userID`,`res_name`, `res_email`, `res_tel`, `res_notes`, `res_date`, `res_slot`) VALUES (?,?,?,?,?,?,?)";
     $cond = [$userID, $name, $email, $tel, $notes, $date, $slot];
