@@ -29,7 +29,7 @@ div.calendar table td.active {
 /* Dates you can choose */
 div.calendar table td.pick:hover {
   cursor: pointer;
-  background: #ffe5d3;
+  background: rgb(155, 204, 253);
 }
 /* Blank cells */
 div.calendar td.blank {
