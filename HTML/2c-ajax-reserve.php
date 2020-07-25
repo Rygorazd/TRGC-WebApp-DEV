@@ -3,6 +3,7 @@
 require "lib/2a-config.php";
 require "lib/2b-lib-res.php";
 $reslib = new Res();
+$userID = $_SESSION["userID"];
 
 /* ANTI-SPAM MEASURE YOU CAN CONSIDER
  * ONLY ALLOW REGISTERED USERS TO BOOK
@@ -158,36 +159,11 @@ if ($_POST['req']) { switch ($_POST['req']) {
     </select>
     <?php break;
 
-  // ADD NEW RESERVATION - WHOLE DAY BOOKING
-  case "book-day":
-    // Save reservation to database
-    $pass = $reslib->bookDay(
-      $_POST['name'], $_POST['email'], $_POST['tel'], $_POST['date'], 
-      $_POST['notes'] ? $_POST['notes'] : ""
-    );
-
-    /* You can send an email if you want
-    if ($pass) {
-      $message = "";
-      foreach ($_POST as $k=>$v) {
-        $message .= $k . " - " . $v;
-      }
-      @mail("admin@yoursite.com", "Reservation receieved", $message);
-    }
-    */
-
-    // Server response
-    echo json_encode([
-      "status" => $pass ? 1 : 0,
-      "message" => $pass ? "OK" : $reslib->error
-    ]);
-    break;
-
   // ADD NEW RESERVATION - TIME SLOT BOOKING
   case "book-slot":
     // Save reservation to database
     $pass = $reslib->bookSlot(
-      $_POST['name'], $_POST['email'], $_POST['tel'], $_POST['date'], $_POST['slot'],
+      $_POST['name'], $_POST['email'], $_POST['tel'], $_POST['date'], $_POST['slot'],$_POST['userID']
       $_POST['notes'] ? $_POST['notes'] : ""
     );
     /* You can send an email if you want
@@ -205,29 +181,5 @@ if ($_POST['req']) { switch ($_POST['req']) {
       "message" => $pass ? "OK" : $reslib->error
     ]);
     break;
-
-  // ADD NEW RESERVATION - DATE RANGE BOOKING
-  case "book-range":
-    // Save reservation to database
-    $pass = $reslib->bookRange(
-      $_POST['name'], $_POST['email'], $_POST['tel'], $_POST['start'], $_POST['end'],
-      $_POST['notes'] ? $_POST['notes'] : ""
-    );
-    
-    /* You can send an email if you want
-    if ($pass) {
-      $message = "";
-      foreach ($_POST as $k=>$v) {
-        $message .= $k . " - " . $v;
-      }
-      @mail("admin@yoursite.com", "Reservation receieved", $message);
-    }
-    */
-    
-    // Server response
-    echo json_encode([
-      "status" => $pass ? 1 : 0,
-      "message" => $pass ? "OK" : $reslib->error
-    ]);
-    break;
+ 
 }}
