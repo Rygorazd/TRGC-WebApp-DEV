@@ -103,11 +103,9 @@ class Res {
       $this->error = $email . " has already reserved " . $date . " " . $slot;
       return false;
     }
-    // get userID
-    //$userID = $_SESSION['user_login'];
- 
-
+    
     // Process reservation
+    $userID = $_SESSION['user_login']; // additional line
     $sql = "INSERT INTO `reservations` (`res_name`, `res_email`, `res_tel`, `res_notes`, `res_date`, `res_slot`,`userID`) VALUES (?,?,?,?,?,?,?)";
     $cond = [$name, $email, $tel, $notes, $date, $slot, $userID];
     return $this->exec($sql, $cond);
