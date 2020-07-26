@@ -76,8 +76,10 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
   <!-- main content-->
     <div class="container">
     <div class="container body-content" style="padding-top:35px";>
-<h1> Booking page</h1>
+    <div class="container text center">
+<h1>Booking page</h1>
 <p>Please select preffered date & time when you would like to book the course</p>
+    </div>
     <?php include '3b-reserve-slot.php';?>
 </div>
 
