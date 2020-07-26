@@ -102,10 +102,10 @@ class Res {
       return false;
     }
     // get userID
-    //$userID = $_SESSION["userID"];
+    $userID = $_SESSION['user_login'];
 
     // get userID v2
-    $sql = "SELECT * FROM `tbl_user` WHERE userID=$userID";
+    //$sql = "SELECT * FROM `tbl_user` WHERE userID=$userID";
  
 
     // Process reservation
