@@ -90,7 +90,7 @@ class Res {
   }
 
   /* [TIME SLOT BOOKING] */
-  function bookSlot ($userID, $name, $email, $tel, $date, $slot, $notes="") {
+  function bookSlot ($name, $email, $tel, $date, $slot, $notes="",$userID) {
   // bookSlot() : reserve for the time slot
 
     // Check if customer already booked on the time slot
@@ -109,8 +109,8 @@ class Res {
  
 
     // Process reservation
-    $sql = "INSERT INTO `reservations` (`userID`,`res_name`, `res_email`, `res_tel`, `res_notes`, `res_date`, `res_slot`) VALUES (?,?,?,?,?,?,?)";
-    $cond = [$userID, $name, $email, $tel, $notes, $date, $slot];
+    $sql = "INSERT INTO `reservations` (`res_name`, `res_email`, `res_tel`, `res_notes`, `res_date`, `res_slot`,`userID`) VALUES (?,?,?,?,?,?,?)";
+    $cond = [$name, $email, $tel, $notes, $date, $slot, $userID];
     return $this->exec($sql, $cond);
   }
 
