@@ -8,7 +8,7 @@ session_start();
 
 if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access to "profile.php" page
 {
-	header("location: booking.php");
+	header("location: login.php");
 }
 				
 $id = $_SESSION['user_login'];
