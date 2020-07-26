@@ -6,7 +6,7 @@ require_once 'config.php';
 				
 session_start();
 
-if(!isset($_SESSION['user_login']))	//check unauthorize user not access in "profile.php" page
+if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access to "profile.php" page
 {
 	header("location: booking.php");
 }
