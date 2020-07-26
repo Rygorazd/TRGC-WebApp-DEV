@@ -1,4 +1,6 @@
 <?php
+$userID = $_SESSION['user_login'];
+
 class Res {
   /* [DATABASE HELPER FUNCTIONS] */
   protected $pdo = null;
@@ -102,10 +104,7 @@ class Res {
       return false;
     }
     // get userID
-    $userID = $_SESSION['user_login'];
-
-    // get userID v2
-    //$sql = "SELECT * FROM `tbl_user` WHERE userID=$userID";
+    //$userID = $_SESSION['user_login'];
  
 
     // Process reservation
