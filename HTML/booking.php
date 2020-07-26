@@ -66,11 +66,9 @@ $userID = $_SESSION["userID"];
 
   <!-- main content-->
     <div class="container">
-    
     <!-- <div class="container body-content" style="padding-top:35px";> -->
 <h1> Booking page</h1>
     <?php include '3b-reserve-slot.php';?>
-
 </div>
 
     <!-- footer -->

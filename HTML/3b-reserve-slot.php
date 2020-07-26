@@ -8,15 +8,12 @@ $_POST = array(); // lets pretend nothing was posted
 <html>
   <head>
     <title>
-      PHP Reservation Demo - Single Time Slot Booking
+      Reservation page
     </title>
     <script src="/public/3b-reserve-slot.js"></script>
     <link href="../CSS/3-theme.css" rel="stylesheet">
   </head>
   <body>
-    <h1>
-      RESERVATION
-    </h1>
     <form id="res_form" onsubmit="return res.save()">
       <label for="res_name">Name</label>
       <input type="text" required id="res_name"/>
