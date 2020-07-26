@@ -43,6 +43,7 @@ html, body {
 #res_form {
   padding: 15px;
   max-width: 400px;
+  margin: 0 auto; /* added to center */
   background: #f2f2f2;
 }
 #res_form label, #res_form input, #res_form button, #res_form select {
