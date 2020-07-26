@@ -72,7 +72,7 @@
 
 				if(!isset($_SESSION['user_login']))	//check unauthorize user not access in "profile.php" page
 				{
-					header("location: index.php");
+					header("location: login.php");
 				}
 				
 				$id = $_SESSION['user_login'];

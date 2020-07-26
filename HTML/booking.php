@@ -10,7 +10,6 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
 {
 	header("location: login.php");
 }
-
 ?>
 
 
