@@ -1,6 +1,8 @@
 <?php
 // INIT
 $userID = $_SESSION["userID"];
+
+$_POST = array(); // lets pretend nothing was posted
 ?>
 
 
