@@ -1,12 +1,12 @@
 <?php
 // INIT
-$userID = $_SESSION["userID"];
+$userID = $_SESSION['user_login'];
 				
 require_once 'config.php';
 				
 session_start();
 
-if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access to "profile.php" page
+if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access to "booking.php" page
 {
 	header("location: login.php");
 }
