@@ -105,7 +105,7 @@ class Res {
     //$userID = $_SESSION["userID"];
 
     // get userID v2
-    $sql = "SELECT * FROM `tbl_user` WHERE userID=$userID";
+    //$sql = "SELECT * FROM `tbl_user` WHERE userID=$userID";
  
 
     // Process reservation
