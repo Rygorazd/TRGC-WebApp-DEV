@@ -92,7 +92,7 @@ class Res {
   }
 
   /* [TIME SLOT BOOKING] */
-  function bookSlot ($name, $email, $tel, $date, $slot, $notes="",$userID) {
+  function bookSlot ($name, $email, $tel, $date, $slot, $notes="", $userID) {
   // bookSlot() : reserve for the time slot
 
     // Check if customer already booked on the time slot
