@@ -1,4 +1,5 @@
 <?php
+session_start();
 // INIT
 require "lib/2a-config.php";
 require "lib/2b-lib-res.php";
