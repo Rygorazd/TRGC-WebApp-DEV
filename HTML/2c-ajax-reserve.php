@@ -18,6 +18,7 @@ if (!is_array($_SESSION['user'])) {
   ]));
 }
 */
+session_start(); 
 
 // HANDLE AJAX REQUEST
 if ($_POST['req']) { switch ($_POST['req']) {
