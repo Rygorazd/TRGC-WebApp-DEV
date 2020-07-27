@@ -9,7 +9,7 @@ $reslib = new Res();
 
 /* ANTI-SPAM MEASURE YOU CAN CONSIDER
  * ONLY ALLOW REGISTERED USERS TO BOOK
- * YOU CAN DO SOMETHING LIKE THIS -> */
+ * YOU CAN DO SOMETHING LIKE THIS -> 
 session_start();
 if (!is_array($_SESSION['user'])) {
   die(json_encode([
@@ -17,6 +17,7 @@ if (!is_array($_SESSION['user'])) {
     "message" => "You must be signed in first"
   ]));
 }
+*/
 
 // HANDLE AJAX REQUEST
 if ($_POST['req']) { switch ($_POST['req']) {
