@@ -1,6 +1,4 @@
 <?php
-//$userID = $_SESSION['user_login'];
-
 class Res {
   /* [DATABASE HELPER FUNCTIONS] */
   protected $pdo = null;
