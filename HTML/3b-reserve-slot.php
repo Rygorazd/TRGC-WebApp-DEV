@@ -1,6 +1,6 @@
 <?php
 // INIT
-$userID = $_SESSION["userID"];
+//$userID = $_SESSION["userID"];
 ?>
 
 <!DOCTYPE html>
