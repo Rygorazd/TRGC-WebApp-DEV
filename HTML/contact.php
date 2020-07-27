@@ -62,7 +62,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
          <a class="nav-item nav-link" href="booking.php">Book </a>
          <a class="nav-item nav-link" href="login.php">Login </a>
          <a class="nav-item nav-link" href="register.php">Register</a>
-         <a class="nav-item nav-link active" href="contact.html">Contact Us<span class="sr-only">(current)</span></a>
+         <a class="nav-item nav-link active" href="contact.php">Contact Us<span class="sr-only">(current)</span></a>
          </div>
          <div class="navbar-nav ml-auto">
          <a class="nav-item nav-link" href="profile.php">Profile</a>
@@ -83,7 +83,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <!-- This is hidden filed booking part -->
         <form action="insert.php" method="post">
     <p> 
-    A hidden field:<input type="hidden" id="myInput" name="country" value="Norway"><br>
+    Booking no. 1<input type="hidden" id="myInput" name="country" value="Norway"><br>
 
         <input type="hidden" id="booking_id" name="booking_id" value="0123">
     </p>

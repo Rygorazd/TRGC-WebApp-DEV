@@ -48,7 +48,7 @@
             <a class="nav-item nav-link" href="booking.php">Book </a>
             <a class="nav-item nav-link" href="login.php">Login</a>
             <a class="nav-item nav-link" href="register.php">Register</a>
-            <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+            <a class="nav-item nav-link" href="contact.php">Contact Us</a>
             </div>
             <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="profile.php">Profile</a>
