@@ -1,10 +1,11 @@
 <?php
-//session_start();
 // INIT
 require "lib/2a-config.php";
 require "lib/2b-lib-res.php";
 $reslib = new Res();
 $userID = $_SESSION['user_login'];
+
+session_start();
 
 /* ANTI-SPAM MEASURE YOU CAN CONSIDER
  * ONLY ALLOW REGISTERED USERS TO BOOK
