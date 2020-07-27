@@ -165,9 +165,10 @@ if ($_POST['req']) { switch ($_POST['req']) {
   case "book-slot":
     // Save reservation to database
     $pass = $reslib->bookSlot(
-      $_POST['name'], $_POST['email'], $_POST['tel'], $_POST['date'], $_POST['slot'],$_POST['userID'],
+      $_POST['name'], $_POST['email'], $_POST['tel'], $_POST['date'], $_POST['slot'],
       $_POST['notes'] ? $_POST['notes'] : ""
     );
+
     /* You can send an email if you want
     if ($pass) {
       $message = "";
