@@ -1,3 +1,17 @@
+<?php
+// INIT
+//$userID = $_SESSION['user_login'];
+				
+require_once 'config.php';
+				
+session_start();
+
+if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access to "booking.php" page
+{
+	header("location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -66,6 +80,25 @@
         there will be something!
 
     </div>
+    <!-- This is hidden filed booking part -->
+        <form action="insert.php" method="post">
+    <p> 
+    A hidden field:<input type="hidden" id="myInput" name="country" value="Norway"><br>
+
+        <input type="hidden" id="booking_id" name="booking_id" value="0123">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="101">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-11">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="17-00-00">
+    </p>
+    <input type="submit" value="Submit">
+</form>
+    
 </div>
 
     <!-- footer -->
