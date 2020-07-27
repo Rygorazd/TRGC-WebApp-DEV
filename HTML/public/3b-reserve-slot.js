@@ -99,7 +99,7 @@ var res = {
     data.append('notes', document.getElementById("res_notes").value);
     data.append('date', select);
     data.append('slot', document.querySelector("#res_slot select").value);
-    // data.append('userID', document.getElementById("userID").value); //Added for userID
+    data.append('userID', document.getElementById("userID").value); //Added for userID
 
     // AJAX call
     var xhr = new XMLHttpRequest();

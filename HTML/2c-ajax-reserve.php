@@ -3,7 +3,7 @@
 require "lib/2a-config.php";
 require "lib/2b-lib-res.php";
 $reslib = new Res();
-//$userID = $_SESSION['user_login'];
+$userID = $_SESSION['user_login'];
 
 
 
@@ -167,7 +167,7 @@ if ($_POST['req']) { switch ($_POST['req']) {
     // Save reservation to database
     $pass = $reslib->bookSlot(
       $_POST['name'], $_POST['email'], $_POST['tel'], $_POST['date'], $_POST['slot'],
-      $_POST['notes'] ? $_POST['notes'] : ""
+      $_POST['notes'] ? $_POST['notes'] : "" , $_POST['userID']
     );
 
     /* You can send an email if you want
