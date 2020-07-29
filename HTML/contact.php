@@ -80,12 +80,15 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
         there will be something!
 
     </div>
-    <!-- This is hidden filed booking part -->
-        <form action="insert.php" method="post">
+
+    <div class="wrapper">
+
+    <div>
+    <form action="insert.php" method="post">
     <p> 
     Booking no. 1
 
-        <input type="hidden" id="booking_id" name="booking_id" value="0135">
+        <input type="hidden" id="booking_id" name="booking_id" value="01235">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="102">
@@ -97,14 +100,15 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
         <input type="hidden" id="book_slot" name="book_slot" value="10am">
     </p>
     <input type="submit" value="Submit">
-</form>
+    </form>
+    </div>
 
-    <!-- This is hidden filed booking part -->
+    <div>
     <form action="insert.php" method="post">
     <p> 
     Booking no. 2
 
-        <input type="hidden" id="booking_id" name="booking_id" value="02209">
+        <input type="hidden" id="booking_id" name="booking_id" value="02222">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="101">
@@ -116,14 +120,15 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
         <input type="hidden" id="book_slot" name="book_slot" value="10am">
     </p>
     <input type="submit" value="Submit">
-</form>
+    </form>
+    </div>
 
-    <!-- This is hidden filed booking part -->
+    <div>
     <form action="insert.php" method="post">
     <p> 
     Booking no. 3
 
-        <input type="hidden" id="booking_id" name="booking_id" value="03209">
+        <input type="hidden" id="booking_id" name="booking_id" value="039">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="103">
@@ -136,6 +141,70 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     </p>
     <input type="submit" value="Submit">
 </form>
+    </div>
+
+    <div>
+    <form action="insert.php" method="post">
+    <p> 
+    Booking no. 4
+
+        <input type="hidden" id="booking_id" name="booking_id" value="0435">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="102">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+    </p>
+    <input type="submit" value="Submit">
+    </form>
+    </div>
+
+    <div>
+    <form action="insert.php" method="post">
+    <p> 
+    Booking no. 5
+
+        <input type="hidden" id="booking_id" name="booking_id" value="0535">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="102">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+    </p>
+    <input type="submit" value="Submit">
+    </form>
+    </div>
+
+    <div>
+    <form action="insert.php" method="post">
+    <p> 
+    Booking no. 6
+
+        <input type="hidden" id="booking_id" name="booking_id" value="0635">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="102">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+    </p>
+    <input type="submit" value="Submit">
+    </form>
+    </div>
+
+    </div>
+
     
 </div>
 
