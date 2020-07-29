@@ -49,17 +49,17 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
 * {box-sizing: border-box;}
 
 .wrapper {
-  border: 2px solid #f76707;
+  border: 2px solid #ded1c8;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
 .wrapper > div {
-  border: 2px solid #ffa94d;
+  border: 2px solid #f7ede1;
   border-radius: 5px;
-  background-color: #ffd8a8;
+  background-color: #f7f3ed;
   padding: 1em;
-  color: #d9480f;
+  color: #e3d1ca;
 }
  </style>
 
@@ -104,35 +104,16 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Booking no. 1
+    Date: 12/08/2020
+    Time: 10am
 
-        <input type="hidden" id="booking_id" name="booking_id" value="01250">
-    </p>
-    <p>
-        <input type="hidden" id="user_id" name="user_id" value="<?php echo $user_id?>">
-    </p>
-    <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
-    </p>
-    <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
-    </p>
-    <input type="submit" value="Book">
-    </form>
-    </div>
-
-    <div>
-    <form action="insert.php" method="post">
-    <p> 
-    Booking no. 2
-
-        <input type="hidden" id="booking_id" name="booking_id" value="02276">
+        <input type="hidden" id="booking_id" name="booking_id" value="120820">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="">
     </p>
     <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-12">
     </p>
     <p>
         <input type="hidden" id="book_slot" name="book_slot" value="10am">
@@ -144,18 +125,40 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Booking no. 3
+    Date: 13/08/2020
+    Time: 2pm
 
-        <input type="hidden" id="booking_id" name="booking_id" value="039">
+        <input type="hidden" id="booking_id" name="booking_id" value="130820">
     </p>
     <p>
-        <input type="hidden" id="user_id" name="user_id" value="103">
+        <input type="hidden" id="user_id" name="user_id" value="">
     </p>
     <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-13">
     </p>
     <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+        <input type="hidden" id="book_slot" name="book_slot" value="2pm">
+    </p>
+    <input type="submit" value="Book">
+    </form>
+    </div>
+
+    <div>
+    <form action="insert.php" method="post">
+    <p> 
+    Date: 16/08/2020
+    Time: 9am
+
+        <input type="hidden" id="booking_id" name="booking_id" value="160820">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-16">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="9am">
     </p>
     <input type="submit" value="Book">
 </form>
@@ -164,18 +167,19 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Booking no. 4
+    Date: 16/08/2020
+    Time: 1pm
 
-        <input type="hidden" id="booking_id" name="booking_id" value="0435">
+        <input type="hidden" id="booking_id" name="booking_id" value="170820">
     </p>
     <p>
-        <input type="hidden" id="user_id" name="user_id" value="102">
+        <input type="hidden" id="user_id" name="user_id" value="">
     </p>
     <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-17">
     </p>
     <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+        <input type="hidden" id="book_slot" name="book_slot" value="1pm">
     </p>
     <input type="submit" value="Book">
     </form>
@@ -184,18 +188,19 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Booking no. 5
+    Date: 20/08/2020
+    Time: 11am
 
-        <input type="hidden" id="booking_id" name="booking_id" value="0535">
+        <input type="hidden" id="booking_id" name="booking_id" value="200820">
     </p>
     <p>
-        <input type="hidden" id="user_id" name="user_id" value="102">
+        <input type="hidden" id="user_id" name="user_id" value="">
     </p>
     <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-20">
     </p>
     <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+        <input type="hidden" id="book_slot" name="book_slot" value="11am">
     </p>
     <input type="submit" value="Book">
     </form>
@@ -204,18 +209,19 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Booking no. 6
+    Date: 20/08/2020
+    Time: 3pm
 
-        <input type="hidden" id="booking_id" name="booking_id" value="0635">
+        <input type="hidden" id="booking_id" name="booking_id" value="2008201">
     </p>
     <p>
-        <input type="hidden" id="user_id" name="user_id" value="102">
+        <input type="hidden" id="user_id" name="user_id" value="">
     </p>
     <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-20">
     </p>
     <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+        <input type="hidden" id="book_slot" name="book_slot" value="3pm">
     </p>
     <input type="submit" value="Book">
     </form>
