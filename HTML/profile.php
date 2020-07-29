@@ -94,17 +94,17 @@
 				<h3>
 				<?php
 								
-				$select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
+				$select_stmt = $db->prepare("SELECT booking_id,book_slot,book_day FROM tbl_bookings WHERE user_id=:uid");
 				$select_stmt->execute(array(":uid"=>$id));
 	
 				$row=$select_stmt->fetch(PDO::FETCH_ASSOC);
 				
 				if(isset($_SESSION['user_login']))
 				{
-				?>
-					upcoming bookings: 
-				<?php
-						echo $row['booking_id'];
+                    echo "<br> Booking ID: ". $row["booking_id"]. " Date: ". $row["book_date"]. " Time: " . $row["book_slot"] . "<br>";
+                    //echo $row['booking_id'];
+                    //echo $row['book_date'];
+                    //echo $row['book_slot'];
 				}
 				?>
 				</h3>
