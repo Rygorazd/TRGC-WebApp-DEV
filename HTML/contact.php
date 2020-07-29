@@ -41,11 +41,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
  <script src="../JavaScript/script.js"></script>
 
  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"> -->
- <style type="text/css">
-     /* body{ font: 14px sans-serif; } */
-     /*.wrapper{ width: 350px; padding: 20px; margin: 0 auto;}*/
 
- </style>
 
 </head>
 <body>
@@ -81,141 +77,9 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
 
     </div>
 
-    <div class="wrapper">
-
-    <div>
-    <form action="insert.php" method="post">
-    <p> 
-    Booking no. 1
-
-        <input type="hidden" id="booking_id" name="booking_id" value="01235">
-    </p>
-    <p>
-        <input type="hidden" id="user_id" name="user_id" value="102">
-    </p>
-    <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
-    </p>
-    <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
-    </p>
-    <input type="submit" value="Submit">
-    </form>
-    </div>
-
-    <div>
-    <form action="insert.php" method="post">
-    <p> 
-    Booking no. 2
-
-        <input type="hidden" id="booking_id" name="booking_id" value="02222">
-    </p>
-    <p>
-        <input type="hidden" id="user_id" name="user_id" value="101">
-    </p>
-    <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
-    </p>
-    <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
-    </p>
-    <input type="submit" value="Submit">
-    </form>
-    </div>
-
-    <div>
-    <form action="insert.php" method="post">
-    <p> 
-    Booking no. 3
-
-        <input type="hidden" id="booking_id" name="booking_id" value="039">
-    </p>
-    <p>
-        <input type="hidden" id="user_id" name="user_id" value="103">
-    </p>
-    <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
-    </p>
-    <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
-    </p>
-    <input type="submit" value="Submit">
-</form>
-    </div>
-
-    <div>
-    <form action="insert.php" method="post">
-    <p> 
-    Booking no. 4
-
-        <input type="hidden" id="booking_id" name="booking_id" value="0435">
-    </p>
-    <p>
-        <input type="hidden" id="user_id" name="user_id" value="102">
-    </p>
-    <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
-    </p>
-    <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
-    </p>
-    <input type="submit" value="Submit">
-    </form>
-    </div>
-
-    <div>
-    <form action="insert.php" method="post">
-    <p> 
-    Booking no. 5
-
-        <input type="hidden" id="booking_id" name="booking_id" value="0535">
-    </p>
-    <p>
-        <input type="hidden" id="user_id" name="user_id" value="102">
-    </p>
-    <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
-    </p>
-    <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
-    </p>
-    <input type="submit" value="Submit">
-    </form>
-    </div>
-
-    <div>
-    <form action="insert.php" method="post">
-    <p> 
-    Booking no. 6
-
-        <input type="hidden" id="booking_id" name="booking_id" value="0635">
-    </p>
-    <p>
-        <input type="hidden" id="user_id" name="user_id" value="102">
-    </p>
-    <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
-    </p>
-    <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="10am">
-    </p>
-    <input type="submit" value="Submit">
-    </form>
-    </div>
-
     </div>
 
     
-</div>
-
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
-</div>
-
     <!-- footer -->
     <div class="container">
         <footer class="fixed-bottom py-3 bg-light">
