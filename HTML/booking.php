@@ -227,9 +227,6 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     </form>
     </div>
 
-    </div>
-    
-
     <div>
     <form action="insert.php" method="post">
     <p> 
@@ -251,9 +248,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     </form>
     </div>
 
-    </div>
-
-    <div>
+     <div>
     <form action="insert.php" method="post">
     <p> 
     <p>Date: 23/08/2020</p>
@@ -274,7 +269,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     </form>
     </div>
 
-    </div>
+     </div>
  </div>
 
     <!-- footer -->
