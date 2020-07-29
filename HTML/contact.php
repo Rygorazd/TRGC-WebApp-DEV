@@ -83,7 +83,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <!-- This is hidden filed booking part -->
         <form action="insert.php" method="post">
     <p> 
-    Booking no. 1<input type="hidden" id="myInput" name="country" value="Norway"><br>
+    Booking no. 1
 
         <input type="hidden" id="booking_id" name="booking_id" value="0123">
     </p>
