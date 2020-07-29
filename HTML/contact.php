@@ -85,10 +85,48 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p> 
     Booking no. 1
 
-        <input type="hidden" id="booking_id" name="booking_id" value="0129">
+        <input type="hidden" id="booking_id" name="booking_id" value="0130">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="102">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+    </p>
+    <input type="submit" value="Submit">
+</form>
+
+    <!-- This is hidden filed booking part -->
+    <form action="insert.php" method="post">
+    <p> 
+    Booking no. 2
+
+        <input type="hidden" id="booking_id" name="booking_id" value="0229">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="101">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+    </p>
+    <input type="submit" value="Submit">
+</form>
+
+    <!-- This is hidden filed booking part -->
+    <form action="insert.php" method="post">
+    <p> 
+    Booking no. 3
+
+        <input type="hidden" id="booking_id" name="booking_id" value="0329">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="103">
     </p>
     <p>
         <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
