@@ -90,12 +90,18 @@
 						echo $row['username'];
 				}
 				?>
-				</h2>
-					<a href="logout.php">Logout</a>
+				
 			</center>
 			
-		</div>
-		
+        </div>
+        
+        <div class="col-lg-12">
+
+
+            </div>
+            
+            </h2>
+					<a href="logout.php">Logout</a>
 	</div>	
 	</div>
 

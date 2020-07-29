@@ -27,6 +27,15 @@ try{
     $stmt->bindParam(':user_id',$row['user_id']);
     $stmt->bindParam(':book_date', $_REQUEST['book_date']);
     $stmt->bindParam(':book_slot', $_REQUEST['book_slot']);
+
+    // Check if customer already booked on the time slot
+    $sql = "SELECT * FROM `bookings` WHERE `book_date`=? AND `book_slot`=?";
+    $cond = [$book_date, $book_slot];
+    $check = $this->fetch($sql, $cond);
+    if (count($check)>0) {
+      $this->error = "This slot is already reserved " . $book_date . " " . $book_slot;
+      return false;
+    }
     
     // Execute the prepared statement
     $stmt->execute();
