@@ -94,39 +94,6 @@
 			
         </div>
         
-        <div class="container">
-                <center>
-                    <h4> Your upcoming bookings: </h4>
-                        <?php
-                            require_once 'config.php';
-				            session_start();
-
-                            // Attempt insert query execution
-                            $id = $_SESSION['user_login'];
-                                                     
-                            $select_stmt = $db->prepare("SELECT * FROM tbl_bookings ");
-                            $select_stmt->execute(array(":uid"=>$id));
-                            $result=$db->query($select_stmt); //
-                            $row=$result->fetch(PDO::FETCH_ASSOC); //
-
-                            echo $row["user_id"];
-                            echo $row["booking_id"];
-                            echo $row["book_date"];
-                            echo $row["book_slot"];
-                            
-
-                            if($result->num_rows>0){
-                                //output data of each row
-                                echo "<br> Booking ID: ". $row["booking_id"]. " Day: ". $row["book_date"]. " Time: ". $row["book_slot"] ."<br>";
-                                }
-                            else {
-                                echo "no upcoming bookings";
-                            } 
-                       ?>
-                </center>
-
-            </div>
-
             <div>
             </h2>
             <center>
