@@ -122,11 +122,12 @@
                 </center>
 
             </div>
-            
+            <div>
             </h2>
             <center>
                     <a href="logout.php">Logout</a>
             </center>
+            </div>
 	</div>	
 	</div>
 
