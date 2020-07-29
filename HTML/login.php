@@ -6,7 +6,7 @@ session_start();
 
 if(isset($_SESSION["user_login"]))	//check condition user login not direct back to index.php page
 {
-	header("location: profile.php");
+	header("location: booking.php");
 }
 
 if(isset($_REQUEST['btn_login']))	//button name is "btn_login" 
