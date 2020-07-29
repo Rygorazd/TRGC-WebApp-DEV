@@ -81,7 +81,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
 
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper1">
 
     <div>
     <form action="insert.php" method="post">
