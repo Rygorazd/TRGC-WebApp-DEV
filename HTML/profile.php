@@ -117,8 +117,6 @@
                             } else {
                                 echo "no upcoming bookings";
                             } 
-                            
-                            //$sql->close();
                        ?>
                 </center>
 
