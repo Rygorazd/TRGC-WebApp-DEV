@@ -1,7 +1,19 @@
 <?php
 require_once 'config.php';
 $user_id = $_SESSION['user_login'];
-$_SESSION['user_id']=$user_id;
+
+$id = $_SESSION['user_login'];
+				
+				$select_stmt = $db->prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
+				$select_stmt->execute(array(":uid"=>$id));
+	
+				$row=$select_stmt->fetch(PDO::FETCH_ASSOC);
+				
+				if(isset($_SESSION['user_login']))
+				{
+					echo $row['user_id'];
+                }
+               				
 
 // Attempt insert query execution
 try{
@@ -11,7 +23,7 @@ try{
     
     // Bind parameters to statement
     $stmt->bindParam(':booking_id', $_REQUEST['booking_id']);
-    $stmt->bindParam(':user_id', $_REQUEST[$user_id]);
+    $stmt->bindParam(':user_id', $_REQUEST['user_id']);
     $stmt->bindParam(':book_date', $_REQUEST['book_date']);
     $stmt->bindParam(':book_slot', $_REQUEST['book_slot']);
     

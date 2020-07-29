@@ -109,7 +109,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
         <input type="hidden" id="booking_id" name="booking_id" value="01237">
     </p>
     <p>
-        <input type="hidden" id="user_id" name="user_id" value=<?php echo "$user_id";?>>
+        <input type="hidden" id="user_id" name="user_id" value="<?php echo $user_id?>">
     </p>
     <p>
         <input type="hidden" id="book_date" name="book_date" value="2020-09-12">
