@@ -103,7 +103,7 @@
 
                 $id = $_SESSION['user_login'];
                 
-				$select_stmt = $db->prepare("SELECT booking_id,book_slot,book_day FROM tbl_bookings WHERE user_id=:uid");
+				$select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
 				$select_stmt->execute(array(":uid"=>$id));
 	
 				$row=$select_stmt->fetch(PDO::FETCH_ASSOC);
