@@ -31,6 +31,8 @@ try{
     // Execute the prepared statement
     $stmt->execute();
     echo "Records inserted successfully.";
+ 	echo $row['username'];
+
 } catch(PDOException $e){
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
