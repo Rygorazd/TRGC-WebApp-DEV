@@ -1,15 +1,15 @@
 <?php
 require_once 'config.php';
 
-/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) 
+/*Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
 try{
-    $pdo = new PDO("mysql:host=localhost;dbname=demo", "root", "");
+    $pdo = new PDO("mysql:host=trgc-mysql.mysql.database.azure.com;dbname=trgcdev", "student", "T0r0nt057");
     // Set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
     die("ERROR: Could not connect. " . $e->getMessage());
-} */
+} 
  
 // Attempt insert query execution
 try{
@@ -32,7 +32,7 @@ try{
  
 // Close connection
 unset($pdo);
-
+/*
 // Prepare an insert statement
 $sql = "INSERT INTO bookings (booking_id, user_id, book_date, book_slot) VALUES (?, ?, ?, ?)";
  
@@ -61,6 +61,6 @@ mysqli_stmt_close($stmt);
  
 // Close connection
 mysqli_close($link);
-
+*/
 
 ?>
