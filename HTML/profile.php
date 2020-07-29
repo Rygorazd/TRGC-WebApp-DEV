@@ -101,8 +101,8 @@
 				
 				if(isset($_SESSION['user_login']))
 				{
-                    echo "<br> Booking ID: ". $row["booking_id"]. " Date: ". $row["book_date"]. " Time: " . $row["book_slot"] . "<br>";
-                    //echo $row['booking_id'];
+                    //echo "<br> Booking ID: ". $row["booking_id"]. " Date: ". $row["book_date"]. " Time: " . $row["book_slot"] . "<br>";
+                    echo $row['booking_id'];
                     //echo $row['book_date'];
                     //echo $row['book_slot'];
 				}
