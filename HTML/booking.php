@@ -1,6 +1,6 @@
 <?php
 // INIT
-$user_id = $_SESSION['user_login'];
+//$user_id = $_SESSION['user_login'];
 				
 require_once 'config.php';
 				
@@ -170,7 +170,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p>Date: 16/08/2020</p>
     <p>Time: 1pm</p>
 
-        <input type="hidden" id="booking_id" name="booking_id" value="170820">
+        <input type="hidden" id="booking_id" name="booking_id" value="">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="">
@@ -191,7 +191,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p>Date: 20/08/2020</p>
     <p>Time: 11am</p>
 
-        <input type="hidden" id="booking_id" name="booking_id" value="200820">
+        <input type="hidden" id="booking_id" name="booking_id" value="">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="">
@@ -212,7 +212,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p>Date: 20/08/2020</p>
     <p>Time: 3pm</p>
 
-        <input type="hidden" id="booking_id" name="booking_id" value="2008201">
+        <input type="hidden" id="booking_id" name="booking_id" value="">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="">
@@ -228,9 +228,54 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     </div>
 
     </div>
-
     
-</div>
+
+    <div>
+    <form action="insert.php" method="post">
+    <p> 
+    <p>Date: 21/08/2020</p>
+    <p>Time: 10am</p>
+
+        <input type="hidden" id="booking_id" name="booking_id" value="">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-21">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="10am">
+    </p>
+    <input type="submit" value="Book">
+    </form>
+    </div>
+
+    </div>
+
+    <div>
+    <form action="insert.php" method="post">
+    <p> 
+    <p>Date: 23/08/2020</p>
+    <p>Time: 4pm</p>
+
+        <input type="hidden" id="booking_id" name="booking_id" value="">
+    </p>
+    <p>
+        <input type="hidden" id="user_id" name="user_id" value="">
+    </p>
+    <p>
+        <input type="hidden" id="book_date" name="book_date" value="2020-08-23">
+    </p>
+    <p>
+        <input type="hidden" id="book_slot" name="book_slot" value="4pm">
+    </p>
+    <input type="submit" value="Book">
+    </form>
+    </div>
+
+    </div>
+ </div>
 
     <!-- footer -->
     <div class="container">

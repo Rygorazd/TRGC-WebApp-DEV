@@ -1,7 +1,6 @@
 <?php
 // INIT
-//$userID = $_SESSION['user_login'];
-				
+			
 require_once 'config.php';
 				
 session_start();
