@@ -133,7 +133,7 @@
 
                             if($result->num_rows>0){
                                 //output data of each row
-                                while($row=$result->FETCH_ASSOC()) {
+                                while($row=$result->fetch(PDO::FETCH_ASSOC)) {
                                     echo "<br> Booking ID: ". $row["booking_id"]. " Day: ". $row["book_date"]. " Time: ". $row["book_slot"] ."<br>";
                                 }
                             } else {
@@ -166,6 +166,5 @@
       </footer>
     </div>
       <!-- footer end -->
-
 </body>
 </html>
