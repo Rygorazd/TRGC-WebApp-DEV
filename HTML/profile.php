@@ -61,7 +61,7 @@
 <div class="wrapper">
 	<div class="container">
 			
-		<div class="col-lg-6">
+		<div class="container">
 			<center>
 				<h3>
 				<?php
@@ -95,7 +95,7 @@
 			
         </div>
         
-        <div class="col-lg-6">
+        <div class="container">
                 <center>
                     <h4> Your upcoming bookings: </h4>
                         <?php
@@ -106,37 +106,7 @@
                                                      
                             $select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
                             $select_stmt->execute(array(":uid"=>$id));
-                            
-                            $result=$db->query($select_stmt);
-
-                            if($result->num_rows>0){
-                                //output data of each row
-                                while($row=$result->fetch(PDO::FETCH_ASSOC)) {
-                                    echo "<br> Booking ID: ". $row["booking_id"]. " Day: ". $row["book_date"]. " Time: ". $row["book_slot"] ."<br>";
-                                }
-                            } else {
-                                echo "no upcoming bookings";
-                            } 
-                            
-                            //$sql->close();
-                       ?>
-                </center>
-
-            </div>
-
-
-            <div class="col-lg-6">
-                <center>
-                    <h4> Your upcoming bookings: </h4>
-                        <?php
-                            require_once 'config.php';
-				
-                            session_start();
-                            $id = $_SESSION['user_login'];
-                                                     
-                            $select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
-                            $select_stmt->execute(array(":uid"=>$id));
-                            echo $row["user_id"];
+                            echo $row["user_id"], $row["booking_id"], $row["book_date"], $row["book_slot"];
                             $result=$db->query($select_stmt);
 
                             if($result->num_rows>0){
