@@ -104,15 +104,15 @@
                             session_start();
                             $id = $_SESSION['user_login'];
                                                      
-                            $sql=("SELECT * FROM tbl_bookings WHERE user_id=:uid");
+                            $select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
                             $select_stmt->execute(array(":uid"=>$id));
                             
-                            $result=$db->query($sql);
+                            $result=$db->query($select_stmt);
 
                             if($result->num_rows>0){
                                 //output data of each row
                                 while($row=$result->fetch(PDO::FETCH_ASSOC)) {
-                                    echo "<br> Booking ID: ". $row["booking_id"]. " Day: ". $row["book_date"]. " Time: ". $row["book_slot"] ."</br>";
+                                    echo "<br> Booking ID: ". $row["booking_id"]. " Day: ". $row["book_date"]. " Time: ". $row["book_slot"] ."<br>";
                                 }
                             } else {
                                 echo "no upcoming bookings";
