@@ -91,9 +91,18 @@
 				?>
 				</h3>
 
-				<h3>
+			</center>
+			
+        </div>
+        
+            <div>
+            </h2>
+            <center>
+            <h3>
 				<?php
-								
+
+                $id = $_SESSION['user_login'];
+                
 				$select_stmt = $db->prepare("SELECT booking_id,book_slot,book_day FROM tbl_bookings WHERE user_id=:uid");
 				$select_stmt->execute(array(":uid"=>$id));
 	
@@ -109,13 +118,6 @@
 				?>
 				</h3>
 
-			</center>
-			
-        </div>
-        
-            <div>
-            </h2>
-            <center>
                     <a href="logout.php">Logout</a>
             </center>
             </div>
