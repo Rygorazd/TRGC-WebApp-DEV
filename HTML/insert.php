@@ -1,16 +1,7 @@
 <?php
 require_once 'config.php';
+$user_id = $_SESSION['user_login'];
 
-/*Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) 
-try{
-    $pdo = new PDO("mysql:host=trgc-mysql.mysql.database.azure.com;dbname=trgcdev", "student", "T0r0nt057");
-    // Set the PDO error mode to exception
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e){
-    die("ERROR: Could not connect. " . $e->getMessage());
-} */
- 
 // Attempt insert query execution
 try{
     // Create prepared statement
