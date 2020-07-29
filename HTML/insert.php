@@ -1,9 +1,8 @@
 <?php
 require_once 'config.php';
 session_start();
-//$user_id = $_SESSION['user_login'];
 
-$id = $_SESSION['user_login'];
+    $id = $_SESSION['user_login'];
 				
 				$select_stmt = $db->prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
 				$select_stmt->execute(array(":uid"=>$id));
@@ -15,7 +14,6 @@ $id = $_SESSION['user_login'];
 					$user_id = $row['user_id'];
                 }
                				
-
 // Attempt insert query execution
 try{
     // Create prepared statement
@@ -28,19 +26,13 @@ try{
     $stmt->bindParam(':book_date', $_REQUEST['book_date']);
     $stmt->bindParam(':book_slot', $_REQUEST['book_slot']);
 
-    // Check if customer already booked on the time slot
-    $sql = "SELECT * FROM `bookings` WHERE `book_date`=? AND `book_slot`=?";
-    $cond = [$book_date, $book_slot];
-    $check = $this->fetch($sql, $cond);
-    if (count($check)>0) {
-      $this->error = "This slot is already reserved " . $book_date . " " . $book_slot;
-      return false;
-    }
-    
+  
     // Execute the prepared statement
     $stmt->execute();
-    echo "Records inserted successfully.";
- 	echo $row['user_id'];
+    echo "Your booking was successfull.";
+     //echo $row['user_id'];
+     //$loginMsg = "Successfully Login...";		//user login success message
+	header("refresh:1; profile.php");			//refresh 1 second after redirect to "profile.php" page
 
 } catch(PDOException $e){
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
@@ -48,35 +40,5 @@ try{
  
 // Close connection
 unset($db);
-/*
-// Prepare an insert statement
-$sql = "INSERT INTO bookings (booking_id, user_id, book_date, book_slot) VALUES (?, ?, ?, ?)";
- 
-if($stmt = mysqli_prepare($link, $sql)){
-    // Bind variables to the prepared statement as parameters
-    mysqli_stmt_bind_param($stmt, "sss", $booking_id, $user_id, $book_date, $book_slot);
-    
-    // Set parameters
-    $boking_id = $_REQUEST['booking_id'];
-    $user_id = $_REQUEST['user_id'];
-    $book_date = $_REQUEST['book_date'];
-    $book_slot = $_REQUEST['book_slot'];
-    
-    // Attempt to execute the prepared statement
-    if(mysqli_stmt_execute($stmt)){
-        echo "Records inserted successfully.";
-    } else{
-        echo "ERROR: Could not execute query: $sql. " . mysqli_error($link);
-    }
-} else{
-    echo "ERROR: Could not prepare query: $sql. " . mysqli_error($link);
-}
- 
-// Close statement
-mysqli_stmt_close($stmt);
- 
-// Close connection
-mysqli_close($link);
-*/
 
 ?>

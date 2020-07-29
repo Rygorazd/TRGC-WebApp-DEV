@@ -107,7 +107,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p>Date: 12/08/2020</p>
     <p>Time: 10am</p>
 
-        <input type="hidden" id="booking_id" name="booking_id" value="120820">
+        <input type="hidden" id="booking_id" name="booking_id" value="">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="">
@@ -128,7 +128,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p>Date: 13/08/2020</p>
     <p>Time: 2pm</p>
 
-        <input type="hidden" id="booking_id" name="booking_id" value="130820">
+        <input type="hidden" id="booking_id" name="booking_id" value="">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="">
@@ -149,7 +149,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p>Date: 16/08/2020</p>
     <p>Time: 9am</p>
 
-        <input type="hidden" id="booking_id" name="booking_id" value="160820">
+        <input type="hidden" id="booking_id" name="booking_id" value="">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="">
