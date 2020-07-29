@@ -85,7 +85,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p> 
     Booking no. 1
 
-        <input type="hidden" id="booking_id" name="booking_id" value="0130">
+        <input type="hidden" id="booking_id" name="booking_id" value="0135">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="102">
@@ -104,7 +104,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p> 
     Booking no. 2
 
-        <input type="hidden" id="booking_id" name="booking_id" value="0229">
+        <input type="hidden" id="booking_id" name="booking_id" value="02209">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="101">
@@ -123,7 +123,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <p> 
     Booking no. 3
 
-        <input type="hidden" id="booking_id" name="booking_id" value="0329">
+        <input type="hidden" id="booking_id" name="booking_id" value="03209">
     </p>
     <p>
         <input type="hidden" id="user_id" name="user_id" value="103">
