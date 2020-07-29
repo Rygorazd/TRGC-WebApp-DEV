@@ -208,6 +208,14 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     
 </div>
 
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+
     <!-- footer -->
     <div class="container">
         <footer class="fixed-bottom py-3 bg-light">
