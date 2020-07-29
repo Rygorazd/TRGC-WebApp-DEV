@@ -5,12 +5,12 @@ $user_id = $_SESSION['user_login'];
 // Attempt insert query execution
 try{
     // Create prepared statement
-    $sql = "INSERT INTO bookings (booking_id, user_id, book_date, book_slot) VALUES (:booking_id, :user_id, :book_date, :book_slot)";
+    $sql = "INSERT INTO bookings (booking_id, $user_id, book_date, book_slot) VALUES (:booking_id, :user_id, :book_date, :book_slot)";
     $stmt = $db->prepare($sql);
     
     // Bind parameters to statement
     $stmt->bindParam(':booking_id', $_REQUEST['booking_id']);
-    $stmt->bindParam(':user_id', $_REQUEST['user_id']);
+    $stmt->bindParam(':user_id', $_REQUEST['$user_id']);
     $stmt->bindParam(':book_date', $_REQUEST['book_date']);
     $stmt->bindParam(':book_slot', $_REQUEST['book_slot']);
     
