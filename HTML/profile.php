@@ -60,7 +60,7 @@
 </div>
 	<div class="container">
 			
-		<div class="container">
+		<div class="wrapper">
 			<center>
 				<h3>
 				<?php
