@@ -63,7 +63,7 @@
 			
 		<div class="col-lg-12">
 			<center>
-				<h2>
+				<h3>
 				<?php
 				
 				require_once 'config.php';
@@ -90,14 +90,14 @@
 						echo $row['username'];
 				}
 				?>
-				
+				</h3>
 			</center>
 			
         </div>
         
         <div class="col-lg-12">
                 <center>
-                    <h2> Your upcoming bookings: </h2>
+                    <h4> Your upcoming bookings: </h4>
                         <?php
                             require_once 'config.php';
 				
@@ -105,7 +105,8 @@
                             $id = $_SESSION['user_login'];
                                                      
                             $sql=("SELECT * FROM tbl_bookings WHERE user_id=:uid");
-                            //$select_stmt->execute(array(":uid"=>$id));
+                            $select_stmt->execute(array(":uid"=>$id));
+                            
                             $result=$db->query($sql);
 
                             if($result->num_rows>0){

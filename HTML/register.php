@@ -147,8 +147,8 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
         <?php
 		}
 		?>   
-			<h2>Don't have account with TRGC yet?</h2>
-			<h2>You can register below to gain access to bookings</h2>
+			<h3>Don't have account with TRGC yet?</h3>
+			<h4>You can register below to gain access to bookings</h4>
 			<form method="post" class="form-horizontal">
 				
 				<div class="form-group">
