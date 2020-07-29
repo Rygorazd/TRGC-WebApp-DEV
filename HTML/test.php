@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
     echo "<table><tr><th>Booking ID</th><th>User ID</th><th>Date</th><th>Time</th></tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["booking_id"]. "</td><td>" . $row["user_id"]. " " . $row["book_date"]. "</td></tr>";
+        echo "<tr><td>" . $row["booking_id"]. "</td><td>" . $row["user_id"]. "</td><td>" . $row["book_date"]. "</td></tr>" . $row["book_slot"]. "</td><td>";
     }
     echo "</table>";
 } else {
