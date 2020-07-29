@@ -102,28 +102,7 @@
                             require_once 'config.php';
 				            session_start();
 
-                            $id = $_SESSION['user_login'];
-				
-				            $select_stmt = $db->prepare("SELECT * FROM tbl_user WHERE user_id=:uid");
-				            $select_stmt->execute(array(":uid"=>$id));
-	
-                            $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
-                            
-                            if(isset($_SESSION['user_login']))
-                            {
-                                $user_id = $row['user_id'];
-                            }
-                                        
                             // Attempt insert query execution
-                            try{
-                                // Create prepared statement
-                                $sql = "SELECT * FROM tbl_bookings WHERE user_id=$user_id";
-                                $stmt = $db->prepare($sql);
-                                echo $row["user_id"], $row["booking_id"], $row["book_date"], $row["book_slot"];
-                                
-                                
-
-
                             $id = $_SESSION['user_login'];
                                                      
                             $select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
