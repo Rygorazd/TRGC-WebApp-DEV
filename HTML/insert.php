@@ -24,7 +24,7 @@ try{
     
     // Bind parameters to statement
     $stmt->bindParam(':booking_id', $_REQUEST['booking_id']);
-    $stmt->bindParam(':user_id',$_REQUEST['user_id']);
+    $stmt->bindParam(':user_id',$row['user_id']);
     $stmt->bindParam(':book_date', $_REQUEST['book_date']);
     $stmt->bindParam(':book_slot', $_REQUEST['book_slot']);
     
