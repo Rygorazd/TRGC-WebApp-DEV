@@ -90,6 +90,25 @@
 				}
 				?>
 				</h3>
+
+				<h3>
+				<?php
+								
+				$select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
+				$select_stmt->execute(array(":uid"=>$id));
+	
+				$row=$select_stmt->fetch(PDO::FETCH_ASSOC);
+				
+				if(isset($_SESSION['user_login']))
+				{
+				?>
+					upcoming bookings: 
+				<?php
+						echo $row['booking_id'];
+				}
+				?>
+				</h3>
+
 			</center>
 			
         </div>
