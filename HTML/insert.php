@@ -1,6 +1,7 @@
 <?php
 require_once 'config.php';
 $user_id = $_SESSION['user_login'];
+$_SESSION['user_id']=$user_id;
 
 // Attempt insert query execution
 try{
