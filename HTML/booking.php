@@ -59,7 +59,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
   border-radius: 5px;
   background-color: #f7f3ed;
   padding: 1em;
-  color: #e3d1ca;
+  color: #080707;
 }
  </style>
 
@@ -104,8 +104,8 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Date: 12/08/2020
-    Time: 10am
+    <p>Date: 12/08/2020</p>
+    <p>Time: 10am</p>
 
         <input type="hidden" id="booking_id" name="booking_id" value="120820">
     </p>
@@ -125,8 +125,8 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Date: 13/08/2020
-    Time: 2pm
+    <p>Date: 13/08/2020</p>
+    <p>Time: 2pm</p>
 
         <input type="hidden" id="booking_id" name="booking_id" value="130820">
     </p>
@@ -146,8 +146,8 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Date: 16/08/2020
-    Time: 9am
+    <p>Date: 16/08/2020</p>
+    <p>Time: 9am</p>
 
         <input type="hidden" id="booking_id" name="booking_id" value="160820">
     </p>
@@ -167,8 +167,8 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Date: 16/08/2020
-    Time: 1pm
+    <p>Date: 16/08/2020</p>
+    <p>Time: 1pm</p>
 
         <input type="hidden" id="booking_id" name="booking_id" value="170820">
     </p>
@@ -188,8 +188,8 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Date: 20/08/2020
-    Time: 11am
+    <p>Date: 20/08/2020</p>
+    <p>Time: 11am</p>
 
         <input type="hidden" id="booking_id" name="booking_id" value="200820">
     </p>
@@ -209,8 +209,8 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
     <div>
     <form action="insert.php" method="post">
     <p> 
-    Date: 20/08/2020
-    Time: 3pm
+    <p>Date: 20/08/2020</p>
+    <p>Time: 3pm</p>
 
         <input type="hidden" id="booking_id" name="booking_id" value="2008201">
     </p>
