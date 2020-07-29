@@ -91,10 +91,10 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
         <input type="hidden" id="user_id" name="user_id" value="101">
     </p>
     <p>
-        <input type="hidden" id="book_date" name="book_date" value="2020-08-11">
+        <input type="hidden" id="book_date" name="book_date" value="11/08/2020">
     </p>
     <p>
-        <input type="hidden" id="book_slot" name="book_slot" value="17-00-00">
+        <input type="hidden" id="book_slot" name="book_slot" value="10am">
     </p>
     <input type="submit" value="Submit">
 </form>
