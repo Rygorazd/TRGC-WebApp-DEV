@@ -43,7 +43,7 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"> -->
  <style type="text/css">
      /* body{ font: 14px sans-serif; } */
-     .wrapper{ width: 350px; padding: 20px; margin: 0 auto;}
+     /*.wrapper{ width: 350px; padding: 20px; margin: 0 auto;}*/
 
  </style>
 
@@ -74,14 +74,14 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
 
    <!-- main content-->
    <div class="container">
-   <!-- <div class="container body-content" style="padding-top:35px";> -->
+   <div class="container body-content" style="padding-top:35px";>
 
     <h1>Contact Us</h1>
         there will be something!
 
     </div>
 
-    <div class="wrapper1">
+    <div class="wrapper">
 
     <div>
     <form action="insert.php" method="post">

@@ -33,19 +33,19 @@ html {
 }
 
 /* booking form formatting */
-.wrapper1 {
+.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 * {box-sizing: border-box;}
 
-.wrapper1 {
+.wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
 
-.wrapper1 > div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
