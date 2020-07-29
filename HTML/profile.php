@@ -58,7 +58,6 @@
   </nav>
   
 </div>
-<div class="wrapper">
 	<div class="container">
 			
 		<div class="container">
@@ -107,7 +106,10 @@
                                                      
                             $select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
                             $select_stmt->execute(array(":uid"=>$id));
-                            echo $row["user_id"], $row["booking_id"], $row["book_date"], $row["book_slot"];
+                            echo $row["user_id"];
+                            echo $row["booking_id"];
+                            echo $row["book_date"];
+                            echo $row["book_slot"];
                             $result=$db->query($select_stmt);
 
                             if($result->num_rows>0){
@@ -130,7 +132,6 @@
             </center>
             </div>
 	</div>	
-	</div>
 
     <!-- footer -->
     <div class="container">
