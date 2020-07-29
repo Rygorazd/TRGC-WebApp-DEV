@@ -96,12 +96,37 @@
         </div>
         
         <div class="col-lg-12">
+                <center>
+                    <h2> Your upcoming bookings: </h2>
+                        <?php
+                            require_once 'config.php';
+				
+                            session_start();
+                            $id = $_SESSION['user_login'];
+                                                     
+                            $sql=("SELECT * FROM tbl_bookings WHERE user_id=:uid");
+                            //$select_stmt->execute(array(":uid"=>$id));
+                            $result=$db->query($sql);
 
+                            if($result->num_rows>0){
+                                //output data of each row
+                                while($row=$result->fetch(PDO::FETCH_ASSOC)) {
+                                    echo "<br> Booking ID: ". $row["booking_id"]. " Day: ". $row["book_date"]. " Time: ". $row["book_slot"] .",/br>";
+                                }
+                            } else {
+                                echo "no upcoming bookings";
+                            } 
+                            
+                            //$sql->close();
+                       ?>
+                </center>
 
             </div>
             
             </h2>
-					<a href="logout.php">Logout</a>
+            <center>
+                    <a href="logout.php">Logout</a>
+            </center>
 	</div>	
 	</div>
 
