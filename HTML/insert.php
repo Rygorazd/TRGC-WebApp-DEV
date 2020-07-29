@@ -1,7 +1,7 @@
 <?php
 require_once 'config.php';
 session_start();
-$user_id = $_SESSION['user_login'];
+//$user_id = $_SESSION['user_login'];
 
 $id = $_SESSION['user_login'];
 				
@@ -12,7 +12,7 @@ $id = $_SESSION['user_login'];
 				
 				if(isset($_SESSION['user_login']))
 				{
-					echo $row['user_id'];
+					$user_id = $row['user_id'];
                 }
                				
 
@@ -24,7 +24,7 @@ try{
     
     // Bind parameters to statement
     $stmt->bindParam(':booking_id', $_REQUEST['booking_id']);
-    $stmt->bindParam(':user_id', $_POST['user_id']);
+    $stmt->bindParam(':user_id',$_REQUEST['user_id']);
     $stmt->bindParam(':book_date', $_REQUEST['book_date']);
     $stmt->bindParam(':book_slot', $_REQUEST['book_slot']);
     
