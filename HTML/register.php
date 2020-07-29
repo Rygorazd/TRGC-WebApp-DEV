@@ -50,7 +50,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 												':uemail'	=>$email, 
 												':upassword'=>$new_password))){
 													
-					$registerMsg="Register Successfully..... Please Click On Login Account Link"; //execute query success message
+					$registerMsg="Registration Successfull..... Please Click On Login Account Link"; //execute query success message
 				}
 			}
 		}
