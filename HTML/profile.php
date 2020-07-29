@@ -104,7 +104,7 @@
                             // Attempt insert query execution
                             $id = $_SESSION['user_login'];
                                                      
-                            $select_stmt = $db->prepare("SELECT * FROM tbl_bookings WHERE user_id=:uid");
+                            $select_stmt = $db->prepare("SELECT * FROM tbl_bookings ");
                             $select_stmt->execute(array(":uid"=>$id));
                             $result=$db->query($select_stmt); //
                             $row=$result->fetch(PDO::FETCH_ASSOC); //
