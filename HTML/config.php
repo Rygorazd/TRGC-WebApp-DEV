@@ -1,8 +1,8 @@
 <?php
-$db_host="trgc-mysql.mysql.database.azure.com"; //host server 
+$db_host="trgc.mysql.database.azure.com"; //host server 
 $db_user="student";	//database username
 $db_password="T0r0nt057";	//database password   
-$db_name="trgcdev";	//database name
+$db_name="trgc";	//database name
 
 try
 {
