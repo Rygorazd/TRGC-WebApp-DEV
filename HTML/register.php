@@ -34,10 +34,10 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 			$row=$select_stmt->fetch(PDO::FETCH_ASSOC);	
 			
 			if($row["username"]==$username){
-				$errorMsg[]="Sorry username already exists";	//check condition username already exists 
+				$errorMsg[]="Sorry, this username is already taken";	//check condition username already exists 
 			}
 			else if($row["email"]==$email){
-				$errorMsg[]="Sorry email already exists";	//check condition email already exists 
+				$errorMsg[]="Sorry, account with this email already exists";	//check condition email already exists 
 			}
 			else if(!isset($errorMsg)) //check no "$errorMsg" show then continue
 			{
@@ -50,7 +50,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 												':uemail'	=>$email, 
 												':upassword'=>$new_password))){
 													
-					$registerMsg="Registration Successfull..... Please Click On Login Account Link"; //execute query success message
+					$registerMsg="Registration Successfull... Redirecting to login page..."; //execute query success message
 					header("refresh:1; profile.php");			//refresh 1 second after redirect to "profile.php" page
 				}
 			}
