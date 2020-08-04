@@ -51,6 +51,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 												':upassword'=>$new_password))){
 													
 					$registerMsg="Registration Successfull..... Please Click On Login Account Link"; //execute query success message
+					header("refresh:1; profile.php");			//refresh 1 second after redirect to "profile.php" page
 				}
 			}
 		}

@@ -39,12 +39,12 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 					if(password_verify($password, $row["password"])) //check condition user taypable "password" are match from database "password" using password_verify() after continue
 					{
 						$_SESSION["user_login"] = $row["user_id"];	//session name is "user_login"
-						$loginMsg = "Successfully Login...";		//user login success message
+						$loginMsg = "Login Successfull ... redirecting";		//user login success message
 						header("refresh:1; profile.php");			//refresh 1 second after redirect to "profile.php" page
 					}
 					else
 					{
-						$errorMsg[]="wrong password";
+						$errorMsg[]="wrong credentials";
 					}
 				}
 				else
