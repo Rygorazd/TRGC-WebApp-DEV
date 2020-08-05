@@ -7,7 +7,12 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 	$username	= strip_tags($_REQUEST['txt_username']);	//textbox name "txt_email"
 	$email		= strip_tags($_REQUEST['txt_email']);		//textbox name "txt_email"
 	$password	= strip_tags($_REQUEST['txt_password']);	//textbox name "txt_password"
-		
+	
+	if (preg_match('/^[a-zA-Z0-9]+$/', $username)) {
+		echo 'Username is valid';
+	} else {
+		echo 'Username is NOT valid';
+	}
 	if(empty($username)){
 		$errorMsg[]="Please enter username";	//check username textbox not empty 
 	}
@@ -50,7 +55,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 												':uemail'	=>$email, 
 												':upassword'=>$new_password))){
 													
-					$registerMsg="Registration Successfull... Redirecting to login page..."; //execute query success message
+					$registerMsg="Registration Successful... Redirecting to login page..."; //execute query success message
 					header("refresh:1; profile.php");			//refresh 1 second after redirect to "profile.php" page
 				}
 			}
