@@ -8,12 +8,8 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 	$email		= strip_tags($_REQUEST['txt_email']);		//textbox name "txt_email"
 	$password	= strip_tags($_REQUEST['txt_password']);	//textbox name "txt_password"
 	
-	if (preg_match('/^[a-zA-Z0-9]+$/', $username)) {
-		echo 'Username is valid';
-	} else {
-		echo 'Username is NOT valid';
-	}
-	if(empty($username)){
+
+	if (empty($username)){
 		$errorMsg[]="Please enter username";	//check username textbox not empty 
 	}
 	else if(empty($email)){
@@ -28,7 +24,11 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 	else if(strlen($password) < 6){
 		$errorMsg[] = "Password must be atleast 6 characters";	//check passowrd must be 6 characters
 	}
-	else
+	else if (preg_match('/^[a-zA-Z0-9]+$/', $username)){}
+	
+	else  {
+		$errorMsg[]="Username is NOT valid";
+	}
 	{	
 		try
 		{	
