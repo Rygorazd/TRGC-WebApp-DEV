@@ -22,7 +22,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 		$errorMsg[]="Please enter password";	//check passowrd textbox not empty
 	}
 	else if(strlen($password) < 6){
-		$errorMsg[] = "Password must be atleast 6 characters";	//check passowrd must be 6 characters
+		$errorMsg[] = "Password must be atleast 6 characters long";	//check passowrd must be 6 characters
 	}
 	else if (preg_match('/^[a-zA-Z0-9]+$/', $username)){} //check for valid characters (letters & numbers) within username
 	
