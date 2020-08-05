@@ -27,7 +27,7 @@ if(isset($_REQUEST['btn_register'])) //button name "btn_register"
 	else if (preg_match('/^[a-zA-Z0-9]+$/', $username)){}
 	
 	else  {
-		$errorMsg[]="Username is NOT valid";
+		$errorMsg[]="Username contains invalid characters. Please make sure to use only letters and numbers";
 	}
 	{	
 		try
