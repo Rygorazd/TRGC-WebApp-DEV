@@ -111,6 +111,8 @@
 				if(isset($_SESSION['user_login']))
 				{
                     echo "Upcoming bookings:";
+                  
+                    
                     echo "<br> Booking ID: ". $row["booking_id"]. " Date: ". $row["book_date"]. " Time: " . $row["book_slot"] . "<br>";
 
 				}
