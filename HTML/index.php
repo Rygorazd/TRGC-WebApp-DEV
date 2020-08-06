@@ -70,14 +70,14 @@
                     <div class="container" style="padding-top:35px">
     <div class="container-fluid">
         <p class="text-black-100">
-            <!--TODO delete before deployment-->
+            
             <br /> 
-            DEV version!!
+            
             <br />
             Welcome to the Three Rock Golf Club, the best golf club in Ireland!
                 <br />
                 <br />
-            Over <a href="login.php">here</a> you can pre-book tee at our club.
+            Over <a href="booking.php">here</a> you can pre-book tee at our club.
                 <br />
                 <br />
             Not a member yet? Not a problem. Register <a href="register.php">here</a> and book in minutes.

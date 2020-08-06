@@ -29,13 +29,11 @@ try{
   
     // Execute the prepared statement
     $stmt->execute();
-    echo "Your booking was successfull.";
-     //echo $row['user_id'];
-     //$loginMsg = "Successfully Login...";		//user login success message
-	header("refresh:1; profile.php");			//refresh 1 second after redirect to "profile.php" page
+    echo "Your booking was successfull. Redirecting...";
+    header("refresh:1; profile.php");			//refresh 1 second after redirect to "profile.php" page
 
 } catch(PDOException $e){
-    die("ERROR: Could not able to execute $sql. " . $e->getMessage());
+    die("ERROR: Could not execute $sql. " . $e->getMessage());
 }
  
 // Close connection

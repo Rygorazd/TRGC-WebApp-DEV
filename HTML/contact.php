@@ -71,8 +71,11 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
    <div class="container">
    <div class="container body-content" style="padding-top:35px";>
 <center>
-    <h1>Contact Us</h1>
-        there will be something!
+    <h2>Contact Us</h2>
+        <br>
+        <br>
+        <br>
+        <h3>Contact details coming soon!</h3>
 </center>
     </div>
 

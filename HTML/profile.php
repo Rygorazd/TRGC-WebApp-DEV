@@ -69,7 +69,7 @@
 				
 				session_start();
 
-				if(!isset($_SESSION['user_login']))	//check unauthorize user not access in "profile.php" page
+				if(!isset($_SESSION['user_login']))	//check if unauthorized user don't have access to "profile.php" page
 				{
 					header("location: login.php");
 				}
@@ -112,9 +112,7 @@
 				{
                     echo "Upcoming bookings:";
                     echo "<br> Booking ID: ". $row["booking_id"]. " Date: ". $row["book_date"]. " Time: " . $row["book_slot"] . "<br>";
-                    //echo $row['booking_id'];
-                    //echo $row['book_date'];
-                    //echo $row['book_slot'];
+
 				}
 				?>
 				</h3>

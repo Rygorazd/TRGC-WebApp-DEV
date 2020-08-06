@@ -44,17 +44,17 @@ if(isset($_REQUEST['btn_login']))	//button name is "btn_login"
 					}
 					else
 					{
-						$errorMsg[]="wrong credentials";
+						$errorMsg[]="Incorrect credentials, please try again.";
 					}
 				}
 				else
 				{
-					$errorMsg[]="wrong username or email";
+					$errorMsg[]="Wrong username or email";
 				}
 			}
 			else
 			{
-				$errorMsg[]="wrong username or email";
+				$errorMsg[]="Wrong username or email";
 			}
 		}
 		catch(PDOException $e)
