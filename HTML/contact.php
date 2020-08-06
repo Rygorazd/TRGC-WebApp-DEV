@@ -1,16 +1,3 @@
-<?php
-// INIT
-			
-require_once 'config.php';
-				
-session_start();
-
-if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access to "booking.php" page
-{
-	header("location: login.php");
-}
-?>
-
 <!DOCTYPE html>
 
 <html lang="en">
