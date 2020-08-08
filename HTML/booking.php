@@ -74,10 +74,10 @@ if(!isset($_SESSION['user_login']))	//check if unauthorized user has no access t
      <div class="collapse navbar-collapse" id="navbarCollapse">
      <div class="navbar-nav">
          <a class="nav-item nav-link" href="index.php">Home </a>
-         <a class="nav-item nav-link" href="booking.php">Book </a>
+         <a class="nav-item nav-link active" href="booking.php">Book <span class="sr-only">(current)</span></a>
          <a class="nav-item nav-link" href="login.php">Login </a>
          <a class="nav-item nav-link" href="register.php">Register</a>
-         <a class="nav-item nav-link active" href="contact.php">Contact Us<span class="sr-only">(current)</span></a>
+         <a class="nav-item nav-link" href="contact.php">Contact Us</a>
          </div>
          <div class="navbar-nav ml-auto">
          <a class="nav-item nav-link" href="profile.php">Profile</a>

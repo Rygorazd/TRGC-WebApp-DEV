@@ -51,7 +51,7 @@
         <a class="nav-item nav-link" href="contact.php">Contact Us</a>
         </div>
         <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="profile.php">Profile</a>
+        <a class="nav-item nav-link active" href="profile.php">Profile</a>
         <a class="nav-item nav-link" href="logout.php">Logout</a>
         </div>
         </div>
