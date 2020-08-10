@@ -79,7 +79,7 @@
             Over <a href="booking.php">here</a> you can pre-book tee at our club.
                 <br />
                 <br />
-            Not a member yet? Not a problem. Register <a href="register.php">here</a> and book in minutes.
+            Not a member yet? Not a problem. Register <a href="register.php">here</a> and book in no time.
         </p>
     </div>
 <div class="row justify-content-center" style="padding-top:10px;">
