@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>TRGC | Index</title>
 
     <!-- set initial zoom to 1 and viewport width to device width -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
